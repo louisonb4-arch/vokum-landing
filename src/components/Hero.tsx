@@ -1,77 +1,110 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
+const stats = [
+  { value: '50+', label: 'Projets' },
+  { value: '100%', label: 'Satisfaction' },
+  { value: '48h', label: 'Premier rendu' },
+];
+
+const springTransition = { type: 'spring' as const, stiffness: 60, damping: 18 };
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const reduce = useReducedMotion();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0 vk-grid-bg" />
       {/* Radial glow */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[600px] rounded-full bg-[#c9a84c]/5 blur-[120px]" />
+      <div className="absolute inset-0 vk-glow pointer-events-none" />
+
+      {/* Corner marks — top left */}
+      <div className="absolute top-0 left-0 pointer-events-none">
+        <div className="w-px h-28" style={{ background: 'linear-gradient(to bottom, var(--color-accent), transparent)' }} />
+        <div className="h-px w-28 absolute top-0 left-0" style={{ background: 'linear-gradient(to right, var(--color-accent), transparent)' }} />
+      </div>
+      {/* Corner marks — top right */}
+      <div className="absolute top-0 right-0 pointer-events-none">
+        <div className="w-px h-28 ml-auto" style={{ background: 'linear-gradient(to bottom, var(--color-accent), transparent)' }} />
+        <div className="h-px w-28 absolute top-0 right-0" style={{ background: 'linear-gradient(to left, var(--color-accent), transparent)' }} />
       </div>
 
-      {/* Corner decorations */}
-      <div className="absolute top-0 left-0 w-px h-32 bg-gradient-to-b from-[#c9a84c]/40 to-transparent" />
-      <div className="absolute top-0 left-0 h-px w-32 bg-gradient-to-r from-[#c9a84c]/40 to-transparent" />
-      <div className="absolute top-0 right-0 w-px h-32 bg-gradient-to-b from-[#c9a84c]/40 to-transparent" />
-      <div className="absolute top-0 right-0 h-px w-32 bg-gradient-to-l from-[#c9a84c]/40 to-transparent" />
-
-      <div className="relative max-w-5xl mx-auto px-6 text-center pt-24">
+      <div className="relative max-w-5xl mx-auto px-6 text-center pt-24 pb-16">
         {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c9a84c]/30 bg-[#c9a84c]/5 text-[#c9a84c] text-sm mb-8"
-        >
-          <Sparkles size={12} />
-          <span>{t('badge')}</span>
+        <motion.div {...(reduce ? {} : {
+          initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.7, ease: 'easeOut' },
+        })}>
+          <Badge
+            variant="outline"
+            className="mb-8 px-4 py-1.5 text-xs uppercase tracking-[0.15em] rounded-full"
+            style={{ background: 'var(--badge-bg)', borderColor: 'var(--badge-border)', color: 'var(--badge-text)' }}
+          >
+            {t('badge')}
+          </Badge>
         </motion.div>
 
         {/* Headline */}
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight mb-6"
+          {...(reduce ? {} : {
+            initial: { opacity: 0, y: 28 }, animate: { opacity: 1, y: 0 },
+            transition: { duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] },
+          })}
+          className="text-5xl md:text-7xl lg:text-[88px] font-bold leading-[1.04] tracking-tight mb-6"
         >
-          <span className="text-white">{t('title')} </span>
-          <span className="gold-gradient">{t('titleAccent')}</span>
+          <span style={{ color: 'var(--color-text-primary)' }}>{t('title')} </span>
+          <span className="vk-gradient-text">{t('titleAccent')}</span>
           <br />
-          <span className="text-white">{t('titleEnd')}</span>
+          <span style={{ color: 'var(--color-text-primary)' }}>{t('titleEnd')}</span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-lg text-[#888] max-w-2xl mx-auto mb-10 leading-relaxed"
+          {...(reduce ? {} : {
+            initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 },
+            transition: { duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] },
+          })}
+          className="text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
+          style={{ color: 'var(--color-text-secondary)' }}
         >
           {t('subtitle')}
         </motion.p>
 
         {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          {...(reduce ? {} : {
+            initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 },
+            transition: { duration: 0.7, delay: 0.34, ease: [0.16, 1, 0.3, 1] },
+          })}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
             href="#contact"
-            className="group flex items-center gap-2 px-6 py-3 bg-[#c9a84c] text-black font-semibold rounded hover:bg-[#e8c97e] transition-all duration-200"
+            className={cn(
+              buttonVariants({ size: 'lg' }),
+              'group gap-2 font-semibold uppercase tracking-widest text-xs px-7 cursor-pointer'
+            )}
+            style={{ background: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)', border: 'none' }}
           >
             {t('cta')}
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-200" />
           </a>
           <a
             href="#portfolio"
-            className="px-6 py-3 border border-[#2a2a2a] text-[#888] hover:text-white hover:border-[#444] rounded transition-all duration-200"
+            className={cn(
+              buttonVariants({ variant: 'outline', size: 'lg' }),
+              'uppercase tracking-widest text-xs px-7 cursor-pointer transition-colors duration-200'
+            )}
+            style={{ background: 'transparent', borderColor: 'var(--btn-ghost-border)', color: 'var(--btn-ghost-text)' }}
+            onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-text-primary)')}
+            onMouseLeave={e => (e.currentTarget.style.color = 'var(--btn-ghost-text)')}
           >
             {t('ctaSecondary')}
           </a>
@@ -79,26 +112,75 @@ export default function Hero() {
 
         {/* Stats */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
+          {...(reduce ? {} : {
+            initial: { opacity: 0 }, animate: { opacity: 1 },
+            transition: { duration: 1, delay: 0.7 },
+          })}
+          className="mt-20 grid grid-cols-3 gap-8 max-w-sm mx-auto"
         >
-          {[
-            { value: '50+', label: 'Projects' },
-            { value: '100%', label: 'Satisfaction' },
-            { value: '48h', label: 'First draft' },
-          ].map((stat) => (
+          {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-2xl font-bold gold-gradient">{stat.value}</div>
-              <div className="text-xs text-[#555] mt-1 uppercase tracking-widest">{stat.label}</div>
+              <div className="text-2xl font-bold vk-gradient-text">{stat.value}</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] mt-1.5"
+                style={{ color: 'var(--color-text-muted)' }}>
+                {stat.label}
+              </div>
             </div>
           ))}
         </motion.div>
       </div>
 
+      {/* Floating card — bottom left (desktop only) */}
+      {!reduce && (
+        <motion.div
+          className="hidden lg:flex absolute left-8 xl:left-16 bottom-28 items-center gap-3 rounded-xl px-4 py-3"
+          initial={{ opacity: 0, x: -28, y: 10 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ ...springTransition, delay: 1.1 }}
+          style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--card-border)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+          }}
+        >
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+            style={{ background: 'var(--color-accent-subtle)', border: '1px solid var(--color-accent-border)' }}>
+            <TrendingUp size={15} style={{ color: 'var(--color-accent)' }} />
+          </div>
+          <div>
+            <div className="text-sm font-bold vk-gradient-text leading-none mb-0.5">+340%</div>
+            <div className="text-[10px] uppercase tracking-[0.16em]" style={{ color: 'var(--color-text-muted)' }}>Conversions</div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Floating card — bottom right (desktop only) */}
+      {!reduce && (
+        <motion.div
+          className="hidden lg:flex absolute right-8 xl:right-16 bottom-28 items-center gap-3 rounded-xl px-4 py-3"
+          initial={{ opacity: 0, x: 28, y: 10 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ ...springTransition, delay: 1.25 }}
+          style={{
+            background: 'var(--card-bg)',
+            border: '1px solid var(--card-border)',
+            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
+          }}
+        >
+          <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+            style={{ background: 'var(--color-accent-subtle)', border: '1px solid var(--color-accent-border)' }}>
+            <Zap size={15} style={{ color: 'var(--color-accent)' }} />
+          </div>
+          <div>
+            <div className="text-sm font-bold vk-gradient-text leading-none mb-0.5">48h</div>
+            <div className="text-[10px] uppercase tracking-[0.16em]" style={{ color: 'var(--color-text-muted)' }}>Livraison</div>
+          </div>
+        </motion.div>
+      )}
+
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#080808] to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-32 pointer-events-none"
+        style={{ background: 'linear-gradient(to top, var(--color-bg), transparent)' }} />
     </section>
   );
 }

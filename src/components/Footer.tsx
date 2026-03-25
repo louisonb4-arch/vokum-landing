@@ -1,6 +1,8 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Separator } from '@/components/ui/separator';
+import Image from 'next/image';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -13,16 +15,18 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t border-[#111] py-12 px-6">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded bg-gradient-to-br from-[#e8c97e] to-[#8a6c28] flex items-center justify-center">
-            <span className="text-black font-bold text-xs">V</span>
-          </div>
-          <span className="font-semibold text-white tracking-wide text-sm">VOKUM</span>
-          <span className="text-[#333] mx-3">—</span>
-          <span className="text-[#444] text-sm">{t('tagline')}</span>
+    <footer className="px-6 pb-10 pt-0">
+      <Separator style={{ background: 'var(--color-border)' }} />
+      <div className="max-w-6xl mx-auto pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Logo + tagline */}
+        <div className="flex items-center gap-3">
+          <Image src="/vokum-logo.svg" alt="Vokum" width={28} height={28} />
+          <span className="font-semibold text-sm uppercase tracking-[0.12em]"
+            style={{ color: 'var(--color-text-primary)' }}>
+            Vokum
+          </span>
+          <span style={{ color: 'var(--color-border-emphasis)', margin: '0 4px' }}>—</span>
+          <span className="text-sm" style={{ color: 'var(--color-text-muted)' }}>{t('tagline')}</span>
         </div>
 
         {/* Links */}
@@ -31,7 +35,10 @@ export default function Footer() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[#444] hover:text-[#888] text-xs uppercase tracking-widest transition-colors"
+              className="text-[10px] uppercase tracking-[0.18em] transition-colors duration-200"
+              style={{ color: 'var(--color-text-disabled)' }}
+              onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-text-secondary)')}
+              onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-text-disabled)')}
             >
               {link.label}
             </a>
@@ -39,7 +46,7 @@ export default function Footer() {
         </nav>
 
         {/* Copyright */}
-        <div className="text-[#333] text-xs">
+        <div className="text-[11px]" style={{ color: 'var(--color-text-disabled)' }}>
           © {new Date().getFullYear()} Vokum. {t('rights')}
         </div>
       </div>

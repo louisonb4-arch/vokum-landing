@@ -26,7 +26,6 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="noise-overlay" />
       {children}
     </NextIntlClientProvider>
   );
