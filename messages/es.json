@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "process": "Proceso",
+    "portfolio": "Portfolio",
+    "contact": "Contacto",
+    "cta": "Iniciar proyecto"
+  },
+  "hero": {
+    "badge": "Agencia Web",
+    "title": "Creamos",
+    "titleAccent": "experiencias digitales",
+    "titleEnd": "que convierten.",
+    "subtitle": "Vokum diseña sitios web y landing pages premium para freelancers y empresas que exigen excelencia.",
+    "cta": "Iniciar tu proyecto",
+    "ctaSecondary": "Ver nuestro trabajo"
+  },
+  "services": {
+    "badge": "Lo que hacemos",
+    "title": "Sitios web creados para",
+    "titleAccent": "rendir",
+    "subtitle": "Cada proyecto se elabora con precisión — desde la estrategia hasta la ejecución pixel perfect.",
+    "items": [
+      { "title": "Landing Pages", "description": "Landing pages de alta conversión diseñadas para convertir visitantes en clientes." },
+      { "title": "Sitios corporativos", "description": "Sitios profesionales que reflejan tu identidad de marca y establecen autoridad." },
+      { "title": "Portfolios Freelance", "description": "Portfolios impresionantes que muestran tu trabajo y atraen clientes premium." },
+      { "title": "E-commerce", "description": "Tiendas online que ofrecen una experiencia de compra fluida e impulsan el crecimiento." }
+    ]
+  },
+  "process": {
+    "badge": "Cómo funciona",
+    "title": "De la visión al",
+    "titleAccent": "lanzamiento",
+    "subtitle": "Un proceso optimizado diseñado para entregar resultados excepcionales a tiempo.",
+    "steps": [
+      { "number": "01", "title": "Descubrimiento", "description": "Analizamos en profundidad tus objetivos, audiencia y mercado para crear la estrategia perfecta." },
+      { "number": "02", "title": "Diseño", "description": "Maquetas pixel perfect que capturan la esencia de tu marca y crean experiencias memorables." },
+      { "number": "03", "title": "Desarrollo", "description": "Código limpio y eficiente, construido con tecnologías modernas para velocidad, seguridad y escalabilidad." },
+      { "number": "04", "title": "Lanzamiento", "description": "Pruebas rigurosas seguidas de un despliegue fluido. Permanecemos contigo después del lanzamiento." }
+    ]
+  },
+  "portfolio": {
+    "badge": "Nuestro trabajo",
+    "title": "Proyectos",
+    "titleAccent": "seleccionados",
+    "subtitle": "Una selección de sitios web que hemos construido para nuestros clientes.",
+    "viewProject": "Ver proyecto",
+    "projects": [
+      { "title": "Nexus Finance", "category": "Sitio corporativo", "description": "Sitio premium para empresa de asesoría financiera con visualizaciones de datos dinámicas." },
+      { "title": "Aura Studio", "category": "Portfolio", "description": "Portfolio de agencia creativa con animaciones inmersivas y casos de estudio." },
+      { "title": "Pulse Health", "category": "Landing Page", "description": "Landing page de alta conversión para startup de salud tech — +340% en conversiones." }
+    ]
+  },
+  "testimonials": {
+    "badge": "Lo que dicen",
+    "title": "Lo que dicen nuestros",
+    "titleAccent": "clientes",
+    "items": [
+      { "quote": "Vokum transformó nuestra presencia online. El nuevo sitio triplicó nuestros leads en el primer mes.", "author": "Alexandre Martin", "role": "CEO, Nexus Finance" },
+      { "quote": "Calidad y profesionalismo excepcionales. Superaron nuestras expectativas y entregaron a tiempo.", "author": "Sophie Leclerc", "role": "Fundadora, Aura Studio" },
+      { "quote": "La landing page que crearon es una máquina de conversión. La mejor inversión que hemos hecho.", "author": "Carlos Rivera", "role": "CMO, Pulse Health" }
+    ]
+  },
+  "contact": {
+    "badge": "Contáctanos",
+    "title": "¿Listo para construir",
+    "titleAccent": "algo grande?",
+    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos en 24 horas.",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "project": "Cuéntanos sobre tu proyecto",
+    "submit": "Enviar mensaje",
+    "successTitle": "¡Mensaje enviado!",
+    "successSubtitle": "Te responderemos en 24 horas."
+  },
+  "footer": {
+    "tagline": "Excelencia digital, diseñada.",
+    "rights": "Todos los derechos reservados.",
+    "links": { "services": "Servicios", "process": "Proceso", "portfolio": "Portfolio", "contact": "Contacto" }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "cta": "Start a project"
+  },
+  "hero": {
+    "badge": "Web Agency",
+    "title": "We craft digital",
+    "titleAccent": "experiences",
+    "titleEnd": "that convert.",
+    "subtitle": "Vokum builds premium websites and landing pages for freelancers and companies who demand excellence.",
+    "cta": "Start your project",
+    "ctaSecondary": "See our work"
+  },
+  "services": {
+    "badge": "What we do",
+    "title": "Websites built to",
+    "titleAccent": "perform",
+    "subtitle": "Every project is crafted with precision — from strategy to pixel-perfect execution.",
+    "items": [
+      {
+        "title": "Landing Pages",
+        "description": "High-converting landing pages designed to turn visitors into customers. Fast, responsive, and built for results."
+      },
+      {
+        "title": "Business Websites",
+        "description": "Professional websites that reflect your brand identity and establish authority in your market."
+      },
+      {
+        "title": "Freelancer Portfolios",
+        "description": "Stunning portfolios that showcase your work and attract premium clients."
+      },
+      {
+        "title": "E-commerce",
+        "description": "Online stores that provide a seamless buying experience and drive revenue growth."
+      }
+    ]
+  },
+  "process": {
+    "badge": "How it works",
+    "title": "From vision to",
+    "titleAccent": "launch",
+    "subtitle": "A streamlined process designed to deliver exceptional results on time.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discovery",
+        "description": "We dive deep into your goals, audience, and competitive landscape to craft the perfect strategy."
+      },
+      {
+        "number": "02",
+        "title": "Design",
+        "description": "Pixel-perfect mockups that capture your brand essence and create memorable user experiences."
+      },
+      {
+        "number": "03",
+        "title": "Development",
+        "description": "Clean, performant code built with modern technologies for speed, security, and scalability."
+      },
+      {
+        "number": "04",
+        "title": "Launch",
+        "description": "Rigorous testing followed by a smooth deployment. We stay with you post-launch."
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "Our work",
+    "title": "Selected",
+    "titleAccent": "projects",
+    "subtitle": "A curated selection of websites we've built for our clients.",
+    "viewProject": "View project",
+    "projects": [
+      {
+        "title": "Nexus Finance",
+        "category": "Business Website",
+        "description": "Premium financial advisory firm website with dynamic data visualizations."
+      },
+      {
+        "title": "Aura Studio",
+        "category": "Portfolio",
+        "description": "Creative agency portfolio with immersive animations and case studies."
+      },
+      {
+        "title": "Pulse Health",
+        "category": "Landing Page",
+        "description": "High-converting landing page for a health tech startup — 340% conversion lift."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Client love",
+    "title": "What our clients",
+    "titleAccent": "say",
+    "items": [
+      {
+        "quote": "Vokum transformed our online presence. The new website tripled our inbound leads within the first month.",
+        "author": "Alexandre Martin",
+        "role": "CEO, Nexus Finance"
+      },
+      {
+        "quote": "Exceptional quality and professionalism. They delivered beyond our expectations and on time.",
+        "author": "Sophie Leclerc",
+        "role": "Founder, Aura Studio"
+      },
+      {
+        "quote": "The landing page they built for us is a conversion machine. Best investment we've made.",
+        "author": "Carlos Rivera",
+        "role": "CMO, Pulse Health"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get in touch",
+    "title": "Ready to build",
+    "titleAccent": "something great?",
+    "subtitle": "Tell us about your project and we'll get back to you within 24 hours.",
+    "name": "Full name",
+    "email": "Email address",
+    "project": "Tell us about your project",
+    "submit": "Send message",
+    "successTitle": "Message sent!",
+    "successSubtitle": "We'll be in touch within 24 hours."
+  },
+  "footer": {
+    "tagline": "Crafting digital excellence.",
+    "rights": "All rights reserved.",
+    "links": {
+      "services": "Services",
+      "process": "Process",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    }
+  }
+}
