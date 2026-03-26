@@ -6,6 +6,8 @@ import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
+import HeroMockup from '@/components/HeroMockup';
+
 const stats = [
   { value: '50+', label: 'Projets' },
   { value: '100%', label: 'Satisfaction' },
@@ -58,6 +60,7 @@ export default function Hero() {
             transition: { duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] },
           })}
           className="text-5xl md:text-7xl lg:text-[88px] font-bold leading-[1.04] tracking-tight mb-6"
+          style={{ fontFamily: 'var(--font-display), var(--font-sans)', letterSpacing: '-0.02em' }}
         >
           <span style={{ color: 'var(--color-text-primary)' }}>{t('title')} </span>
           <span className="vk-gradient-text">{t('titleAccent')}</span>
@@ -177,6 +180,11 @@ export default function Hero() {
           </div>
         </motion.div>
       )}
+
+      {/* Browser mockup */}
+      <div className="relative w-full mt-16 pb-8">
+        <HeroMockup />
+      </div>
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 inset-x-0 h-32 pointer-events-none"

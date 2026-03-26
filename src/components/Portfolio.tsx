@@ -72,7 +72,7 @@ export default function Portfolio() {
               style={{ background: 'var(--badge-bg)', borderColor: 'var(--badge-border)', color: 'var(--badge-text)' }}>
               {t('badge')}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--color-text-primary)' }}>
+            <h2 className="text-4xl md:text-5xl font-bold" style={{ color: 'var(--color-text-primary)', fontFamily: 'var(--font-display), var(--font-sans)', letterSpacing: '-0.02em' }}>
               {t('title')} <span className="vk-gradient-text">{t('titleAccent')}</span>
             </h2>
           </div>

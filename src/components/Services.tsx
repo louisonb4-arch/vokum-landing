@@ -30,7 +30,7 @@ export default function Services() {
             style={{ background: 'var(--badge-bg)', borderColor: 'var(--badge-border)', color: 'var(--badge-text)' }}>
             {t('badge')}
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-text-primary)' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-text-primary)', fontFamily: 'var(--font-display), var(--font-sans)', letterSpacing: '-0.02em' }}>
             {t('title')} <span className="vk-gradient-text">{t('titleAccent')}</span>
           </h2>
           <p className="text-lg leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{t('subtitle')}</p>

@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Marquee from '@/components/Marquee';
 import Services from '@/components/Services';
 import Process from '@/components/Process';
 import Portfolio from '@/components/Portfolio';
@@ -12,6 +13,7 @@ export default function Home() {
     <main className="bg-[#080808] min-h-screen">
       <Navbar />
       <Hero />
+      <Marquee />
       <Services />
       <Process />
       <Portfolio />
