@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Vokum | Démarrer un projet</title>
+<meta name="description" content="Parlez-nous de votre projet de landing page : objectifs, budget, délais. Réponse garantie sous 24 h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pages.css">
+<link rel="canonical" href="https://vokum-landing.vercel.app/contact">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body data-page="contact">
+
+<div data-site-header></div>
+
+<main>
+  <section class="page-hero page-hero--contact">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">ACCUEIL</a> / <span>CONTACT</span></div>
+      <h1 class="page-hero__title">Parlons de<br>votre projet</h1>
+      <div class="page-hero__script">réponse sous 24 h, promis.</div>
+    </div>
+  </section>
+
+  <section class="section section--contact">
+    <div class="container contact__grid">
+
+      <aside class="contact__aside reveal">
+        <p class="contact__pitch">Racontez-nous votre projet en quelques lignes. On revient vers vous avec une première lecture, des questions — et si ça matche, un plan d'action.</p>
+        <ul class="contact__points">
+          <li>Réponse sous 24 h ouvrées</li>
+          <li>Appel de cadrage offert (30 min)</li>
+          <li>Devis clair sous 48 h</li>
+        </ul>
+        <div class="contact__alt">
+          <div class="footer__title">OU DIRECTEMENT</div>
+          <a href="mailto:hello@vokum.agency" class="link-underline">hello@vokum.agency</a>
+          <span class="contact__loc">Montréal, Canada</span>
+        </div>
+      </aside>
+
+      <form class="cform reveal" id="contactForm" novalidate>
+        <div class="cform__row">
+          <div class="field">
+            <label class="field__label" for="cf-name">NOM *</label>
+            <input class="field__input" type="text" id="cf-name" name="name" autocomplete="name" placeholder="Votre nom" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="field__label" for="cf-email">EMAIL *</label>
+            <input class="field__input" type="email" id="cf-email" name="email" autocomplete="email" placeholder="vous@entreprise.com" required>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="cform__row">
+          <div class="field">
+            <label class="field__label" for="cf-company">ENTREPRISE / MARQUE</label>
+            <input class="field__input" type="text" id="cf-company" name="company" autocomplete="organization" placeholder="Nom de votre entreprise">
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="field__label" for="cf-type">TYPE DE PROJET</label>
+            <select class="field__input" id="cf-type" name="projectType">
+              <option value="">Choisir…</option>
+              <option>Landing page</option>
+              <option>Refonte de page existante</option>
+              <option>Site vitrine</option>
+              <option>E-commerce</option>
+              <option>Autre</option>
+            </select>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="cform__row">
+          <div class="field">
+            <label class="field__label" for="cf-budget">BUDGET APPROXIMATIF</label>
+            <select class="field__input" id="cf-budget" name="budget">
+              <option value="">Choisir…</option>
+              <option>Moins de 1 000 $</option>
+              <option>1 000 $ – 2 500 $</option>
+              <option>2 500 $ – 5 000 $</option>
+              <option>5 000 $ +</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label class="field__label" for="cf-timeline">DÉLAI SOUHAITÉ</label>
+            <select class="field__input" id="cf-timeline" name="timeline">
+              <option value="">Choisir…</option>
+              <option>Dès que possible</option>
+              <option>Cette semaine</option>
+              <option>Ce mois-ci</option>
+              <option>Dans 1 à 3 mois</option>
+              <option>Je me renseigne seulement</option>
+            </select>
+            <span class="field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="cf-message">VOTRE PROJET *</label>
+          <textarea class="field__input field__input--area" id="cf-message" name="message" rows="5" placeholder="Votre offre, votre objectif, votre audience… tout ce qui nous aide à comprendre." required></textarea>
+          <span class="field__error" aria-live="polite"></span>
+        </div>
+
+        <!-- honeypot anti-spam : invisible pour les humains -->
+        <div class="cform__hp" aria-hidden="true">
+          <label for="cf-website">Site web</label>
+          <input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="cform__foot">
+          <button type="submit" class="btn btn--dark btn--lg cform__submit" id="cfSubmit">
+            <span class="cform__submit-label">ENVOYER MA DEMANDE</span>
+            <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </button>
+          <span class="cform__status" id="cfStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <div class="cform__success reveal" id="cfSuccess" hidden>
+        <div class="cform__success-check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h2 class="h2">Message bien reçu</h2>
+        <div class="cform__success-script">on revient vers vous sous 24 h.</div>
+        <p class="cform__success-text">Merci pour votre confiance. En attendant, jetez un œil à nos réalisations.</p>
+        <a href="/realisations" class="btn btn--dark">VOIR NOS RÉALISATIONS <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+<script src="analytics.js"></script>
+<script src="site.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

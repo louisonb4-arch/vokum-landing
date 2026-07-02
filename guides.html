@@ -10,6 +10,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="pages.css">
+<link rel="canonical" href="https://vokum-landing.vercel.app/guides">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body data-page="guides">
 
@@ -18,7 +22,7 @@
 <main>
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">ACCUEIL</a> / <span>GUIDES</span></div>
+      <div class="breadcrumb"><a href="/">ACCUEIL</a> / <span>GUIDES</span></div>
       <h1 class="page-hero__title">Les guides</h1>
       <div class="page-hero__script">pour convertir, par vous-même.</div>
       <p class="page-hero__lead">Nos méthodes condensées en ressources actionnables. Checklists, templates et frameworks — gratuits, à télécharger.</p>
@@ -29,7 +33,7 @@
     <div class="container">
       <div class="posts">
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p1-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="Checklist landing page"></div>
           <div class="post__body">
             <div class="post__tag">CHECKLIST · PDF</div>
@@ -37,9 +41,9 @@
             <p class="post__excerpt">Tout ce qu'on vérifie avant de mettre une page en ligne. À imprimer.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Télécharger</span></div>
           </div>
-        </a>
+        </article>
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p4-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Template wireframe"></div>
           <div class="post__body">
             <div class="post__tag">TEMPLATE</div>
@@ -47,9 +51,9 @@
             <p class="post__excerpt">La structure de page qu'on réutilise sur 80% de nos projets.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Télécharger</span></div>
           </div>
-        </a>
+        </article>
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p3-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Framework copywriting"></div>
           <div class="post__body">
             <div class="post__tag">FRAMEWORK</div>
@@ -57,9 +61,9 @@
             <p class="post__excerpt">Une méthode pas-à-pas pour écrire un texte de vente qui transforme.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Télécharger</span></div>
           </div>
-        </a>
+        </article>
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p5-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Guide tests A/B"></div>
           <div class="post__body">
             <div class="post__tag">GUIDE · 24 PAGES</div>
@@ -67,9 +71,9 @@
             <p class="post__excerpt">Quoi tester, comment mesurer, combien de temps. Le guide complet.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Télécharger</span></div>
           </div>
-        </a>
+        </article>
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p6-640.webp" width="640" height="640" loading="lazy" decoding="async" alt="Audit gratuit"></div>
           <div class="post__body">
             <div class="post__tag">OUTIL</div>
@@ -77,9 +81,9 @@
             <p class="post__excerpt">10 questions pour repérer ce qui plombe vos conversions aujourd'hui.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Commencer</span></div>
           </div>
-        </a>
+        </article>
 
-        <a class="post reveal" href="#">
+        <article class="post reveal">
           <div class="post__thumb"><img src="assets/p2-700.webp" width="700" height="394" loading="lazy" decoding="async" alt="Guide performance"></div>
           <div class="post__body">
             <div class="post__tag">GUIDE</div>
@@ -87,7 +91,7 @@
             <p class="post__excerpt">Les réglages concrets pour passer le seuil des 90 de performance.</p>
             <div class="post__meta"><span>Gratuit</span><span>·</span><span>Télécharger</span></div>
           </div>
-        </a>
+        </article>
 
       </div>
     </div>
@@ -99,13 +103,14 @@
         <div class="eyebrow eyebrow--light">BESOIN D'UN COUP DE MAIN ?</div>
         <h2 class="h2">On le fait pour vous</h2>
         <div class="cta-band__script">la théorie, c'est bien. Les résultats, c'est mieux.</div>
-        <a href="mailto:hello@vokum.agency?subject=Nouveau%20projet" class="btn btn--lg">DÉMARRER UN PROJET <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+        <a href="/contact" class="btn btn--lg">DÉMARRER UN PROJET <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
       </div>
     </div>
   </section>
 </main>
 
 <div data-site-footer></div>
+<script src="analytics.js"></script>
 <script src="site.js"></script>
 </body>
 </html>

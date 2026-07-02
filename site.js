@@ -5,26 +5,26 @@
    ============================================================ */
 
 const ARROW = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
-const CONTACT = 'mailto:hello@vokum.agency?subject=Nouveau%20projet';
+const CONTACT = '/contact';
 
 const NAV = [
-  { label: 'RÉALISATIONS', href: 'realisations.html', key: 'realisations' },
-  { label: 'SERVICES', href: 'services.html', key: 'services' },
-  { label: 'PROCESSUS', href: 'processus.html', key: 'processus' },
-  { label: 'À PROPOS', href: 'apropos.html', key: 'apropos' },
-  { label: 'TARIFS', href: 'tarifs.html', key: 'tarifs' }
+  { label: 'RÉALISATIONS', href: '/realisations', key: 'realisations' },
+  { label: 'SERVICES', href: '/services', key: 'services' },
+  { label: 'PROCESSUS', href: '/processus', key: 'processus' },
+  { label: 'À PROPOS', href: '/a-propos', key: 'apropos' },
+  { label: 'TARIFS', href: '/tarifs', key: 'tarifs' }
 ];
 
 const FOOT_NAV = [
-  { label: 'Réalisations', href: 'realisations.html' },
-  { label: 'Services', href: 'services.html' },
-  { label: 'Processus', href: 'processus.html' },
-  { label: 'À propos', href: 'apropos.html' }
+  { label: 'Réalisations', href: '/realisations' },
+  { label: 'Services', href: '/services' },
+  { label: 'Processus', href: '/processus' },
+  { label: 'À propos', href: '/a-propos' }
 ];
 const FOOT_RES = [
-  { label: 'Blog', href: 'blog.html' },
-  { label: 'Guides', href: 'guides.html' },
-  { label: 'FAQ', href: 'faq.html' }
+  { label: 'Blog', href: '/blog' },
+  { label: 'Guides', href: '/guides' },
+  { label: 'FAQ', href: '/faq' }
 ];
 
 const page = document.body.dataset.page || '';
@@ -33,7 +33,7 @@ const page = document.body.dataset.page || '';
 const headerHTML = `
 <header class="header" id="top">
   <div class="container header__inner">
-    <a href="index.html" class="brand">VOKUM<span class="brand__dot">.</span></a>
+    <a href="/" class="brand">VOKUM<span class="brand__dot">.</span></a>
     <nav class="nav" aria-label="Navigation principale">
       ${NAV.map((n) => `<a href="${n.href}"${n.key === page ? ' class="is-active" aria-current="page"' : ''}>${n.label}</a>`).join('')}
     </nav>

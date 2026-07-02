@@ -41,7 +41,7 @@ const data = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
-  <a class="service reveal" href="services.html#${s.slug}">
+  <a class="service reveal" href="/services#${s.slug}">
     <div class="service__icon" style="background:${s.iconBg}">${icons[s.icon] || ''}</div>
     <div class="service__title">${esc(s.title)}</div>
     <p class="service__desc">${esc(s.desc)}</p>
@@ -51,14 +51,14 @@ document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
 document.getElementById('timeline').innerHTML =
   '<div class="timeline__line"></div>' +
   data.steps.map((st) => `
-  <a class="step reveal" href="processus.html#etape-${st.n}">
+  <a class="step reveal" href="/processus#etape-${st.n}">
     <div class="step__dot ${st.active ? 'step__dot--active' : 'step__dot--idle'}">${st.n}</div>
     <div class="step__title">${esc(st.title)}</div>
     <p class="step__desc">${esc(st.desc)}</p>
   </a>`).join('');
 
 document.getElementById('worksGrid').innerHTML = data.works.map((w) => `
-  <a class="work reveal" href="realisations.html#${w.slug}">
+  <a class="work reveal" href="/realisations#${w.slug}">
     <div class="work__thumb">
       <img src="${w.image}" alt="Réalisation ${esc(w.name)}" style="object-position:${w.objectPosition}" width="640" height="640" loading="lazy" decoding="async">
     </div>
