@@ -15,11 +15,16 @@ const icons = {
 
 const data = {
   services: [
-    { slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'STRATÉGIE', line: "On analyse votre offre, votre marché et vos concurrents pour poser les bases d'une landing page qui parle à votre audience." },
-    { slug: 'design', n: '02', icon: 'pencil', iconBg: '#f3ecc9', title: 'DESIGN', line: 'Un design moderne, épuré et pensé pour capter dès les premières secondes.' },
-    { slug: 'developpement', n: '03', icon: 'code', iconBg: '#d9e6ea', title: 'DÉVELOPPEMENT', line: 'Développement rapide, propre et optimisé pour la vitesse et la performance.' },
-    { slug: 'seo-geo', n: '04', icon: 'search', iconBg: '#f3dcd4', title: 'SEO & GEO', line: 'Être trouvé sur Google et cité par les IA comme ChatGPT ou Perplexity.' },
-    { slug: 'optimisation', n: '05', icon: 'bar-chart', iconBg: '#e4dcef', title: 'OPTIMISATION', line: 'On teste, on mesure et on optimise en continu pour maximiser vos conversions.' }
+    {
+      slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'CRÉATION DE LANDING PAGE',
+      line: 'Votre page sur-mesure, de la stratégie au lancement. Pensée pour convertir, livrée en moins d’une semaine.',
+      items: ['Stratégie & message de conversion', 'Design premium sur-mesure', 'Développement ultra-rapide', 'Tests A/B & optimisation continue']
+    },
+    {
+      slug: 'seo-geo', n: '02', icon: 'search', iconBg: '#f3dcd4', title: 'SEO & GEO',
+      line: 'Être trouvé sur Google — et cité par les IA comme ChatGPT ou Perplexity. Le référencement d’aujourd’hui et celui de demain.',
+      items: ['SEO technique : balises, vitesse, maillage', 'Données structurées Schema.org', 'Contenu citable par les IA', 'Suivi positions & mentions IA']
+    }
   ],
   steps: [
     { n: '01', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
@@ -43,7 +48,7 @@ const data = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
-  <a class="scard reveal" href="/services#${s.slug}">
+  <a class="scard scard--offer reveal" href="/services#${s.slug}">
     <div class="scard__top">
       <div class="scard__icon" style="background:${s.iconBg}">${icons[s.icon] || ''}</div>
       <span class="scard__num">${s.n}</span>
@@ -51,6 +56,7 @@ document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
     <span class="scard__rule"></span>
     <h3 class="scard__title">${esc(s.title)}</h3>
     <p class="scard__desc">${esc(s.line)}</p>
+    <ul class="scard__list">${s.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
     <div class="scard__foot">
       <span class="scard__more">EN SAVOIR PLUS</span>
       ${arrow}
