@@ -5,46 +5,13 @@
 
 const arrow = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
 
-const icons = {
-  target: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>',
-  pencil: '<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
-  code: '<svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>',
-  'bar-chart': '<svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
-  search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8a3 3 0 0 0-3 3"/></svg>'
-};
-
 const data = {
   services: [
-    {
-      slug: 'strategie', icon: 'target', iconBg: '#e3ead8', n: '01', title: 'STRATÉGIE',
-      desc: "On analyse votre offre, votre marché et vos concurrents pour poser les bases d'une landing page qui parle à votre audience — et qui la pousse à l'action.",
-      items: ['Audit de votre offre et de vos concurrents', 'Message et angle de conversion', 'Wireframe orienté parcours visiteur'],
-      metric: 'La base de nos +190% de conversion moyenne'
-    },
-    {
-      slug: 'design', icon: 'pencil', iconBg: '#f3ecc9', n: '02', title: 'DESIGN',
-      desc: "Un design moderne, épuré et pensé pour capter dès les premières secondes. Chaque section guide l'œil vers l'action — rien ne décore, tout convertit.",
-      items: ['Direction artistique alignée sur votre marque', 'Maquettes haute-fidélité desktop & mobile', 'Système de composants réutilisables'],
-      metric: 'Capte en moins de 3 secondes'
-    },
-    {
-      slug: 'developpement', icon: 'code', iconBg: '#d9e6ea', n: '03', title: 'DÉVELOPPEMENT',
-      desc: 'Développement rapide, propre et optimisé pour la vitesse et la performance. Un code léger qui charge en un éclair sur tous les appareils.',
-      items: ['Intégration pixel-perfect, 100% responsive', 'Score de performance > 90 (Core Web Vitals)', 'Tracking & analytics prêts à mesurer'],
-      metric: 'Chargement en moins d’une seconde'
-    },
-    {
-      slug: 'seo-geo', icon: 'search', iconBg: '#f3dcd4', n: '04', title: 'SEO & GEO',
-      desc: "Être trouvé sur Google — et cité par les IA. On optimise votre page pour le référencement classique (SEO) et pour les moteurs génératifs comme ChatGPT, Perplexity ou les AI Overviews de Google (GEO).",
-      items: ['SEO technique : balises, vitesse, maillage', 'Données structurées Schema.org (JSON-LD)', 'Contenu structuré pour être cité par les IA'],
-      metric: 'Visible sur Google et dans les réponses IA'
-    },
-    {
-      slug: 'optimisation', icon: 'bar-chart', iconBg: '#e4dcef', n: '05', title: 'OPTIMISATION',
-      desc: 'On teste, on mesure et on optimise en continu pour maximiser vos conversions. Chaque itération est guidée par la donnée, jamais par l’intuition.',
-      items: ['Tests A/B sur titres, visuels et CTA', 'Heatmaps & analyse du comportement', 'Itérations mensuelles data-driven'],
-      metric: 'Des points de conversion gagnés chaque mois'
-    }
+    { slug: 'strategie', n: '01', title: 'STRATÉGIE', line: 'On analyse votre offre pour poser les bases qui convertissent.' },
+    { slug: 'design', n: '02', title: 'DESIGN', line: 'Un design épuré qui capte en moins de 3 secondes.' },
+    { slug: 'developpement', n: '03', title: 'DÉVELOPPEMENT', line: "Rapide, propre, charge en moins d'une seconde." },
+    { slug: 'seo-geo', n: '04', title: 'SEO & GEO', line: 'Trouvé sur Google, cité par les IA.' },
+    { slug: 'optimisation', n: '05', title: 'OPTIMISATION', line: 'On teste et on itère pour gagner des points chaque mois.' }
   ],
   steps: [
     { n: '01', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
@@ -68,20 +35,11 @@ const data = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
-  <a class="svc-row reveal" href="/services#${s.slug}">
-    <div class="svc-row__head">
-      <span class="svc-row__num">${s.n}</span>
-      <div class="svc-row__icon" style="background:${s.iconBg}">${icons[s.icon] || ''}</div>
-    </div>
-    <div class="svc-row__main">
-      <h3 class="svc-row__title">${esc(s.title)}</h3>
-      <p class="svc-row__desc">${esc(s.desc)}</p>
-    </div>
-    <div class="svc-row__side">
-      <ul class="svc-row__list">${s.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
-      <div class="svc-row__metric">${arrow}${esc(s.metric)}</div>
-    </div>
-    <span class="svc-row__go">${arrow}</span>
+  <a class="svc-line reveal" href="/services#${s.slug}">
+    <span class="svc-line__num">${s.n}</span>
+    <h3 class="svc-line__title">${esc(s.title)}</h3>
+    <p class="svc-line__desc">${esc(s.line)}</p>
+    <span class="svc-line__go">${arrow}</span>
   </a>`).join('');
 
 document.getElementById('timeline').innerHTML =
