@@ -26,15 +26,15 @@ const data = {
     { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre page.' }
   ],
   works: [
-    { slug: 'nubik', category: 'SAAS', name: 'Nubik', metric: '+220% de conversions', positive: true, image: 'assets/p3.png', objectPosition: 'center top' },
-    { slug: 'finora', category: 'FINTECH', name: 'Finora', metric: '+180% de leads', positive: true, image: 'assets/p4.png', objectPosition: 'center' },
-    { slug: 'studio-vertex', category: 'AGENCE', name: 'Studio Vertex', metric: 'Refonte complète', positive: false, image: 'assets/p5.png', objectPosition: 'center top' },
-    { slug: 'maison-armand', category: 'E-COMMERCE', name: 'Maison Armand', metric: '+160% de ventes', positive: true, image: 'assets/p6.png', objectPosition: 'center' }
+    { slug: 'nubik', category: 'SAAS', name: 'Nubik', metric: '+220% de conversions', positive: true, image: 'assets/p3-640.webp', objectPosition: 'center top' },
+    { slug: 'finora', category: 'FINTECH', name: 'Finora', metric: '+180% de leads', positive: true, image: 'assets/p4-640.webp', objectPosition: 'center' },
+    { slug: 'studio-vertex', category: 'AGENCE', name: 'Studio Vertex', metric: 'Refonte complète', positive: false, image: 'assets/p5-640.webp', objectPosition: 'center top' },
+    { slug: 'maison-armand', category: 'E-COMMERCE', name: 'Maison Armand', metric: '+160% de ventes', positive: true, image: 'assets/p6-640.webp', objectPosition: 'center' }
   ],
   testimonials: [
-    { text: 'Vokum a transformé notre landing page et nos résultats ont explosé. Une équipe réactive et ultra pro.', name: 'Thomas B.', role: 'CEO @ Finora', avatar: 'assets/p9.png' },
-    { text: 'Livré en 5 jours, design incroyable et surtout des conversions au rendez-vous.', name: 'Julie L.', role: 'Marketing @ Nubik', avatar: 'assets/p8.png' },
-    { text: 'Une approche stratégique qui fait toute la différence. Je recommande à 100%.', name: 'Marc D.', role: 'Fondateur @ Studio Vertex', avatar: 'assets/p7.png' }
+    { text: 'Vokum a transformé notre landing page et nos résultats ont explosé. Une équipe réactive et ultra pro.', name: 'Thomas B.', role: 'CEO @ Finora', avatar: 'assets/p9-96.webp' },
+    { text: 'Livré en 5 jours, design incroyable et surtout des conversions au rendez-vous.', name: 'Julie L.', role: 'Marketing @ Nubik', avatar: 'assets/p8-96.webp' },
+    { text: 'Une approche stratégique qui fait toute la différence. Je recommande à 100%.', name: 'Marc D.', role: 'Fondateur @ Studio Vertex', avatar: 'assets/p7-96.webp' }
   ]
 };
 
@@ -60,7 +60,7 @@ document.getElementById('timeline').innerHTML =
 document.getElementById('worksGrid').innerHTML = data.works.map((w) => `
   <a class="work reveal" href="realisations.html#${w.slug}">
     <div class="work__thumb">
-      <img src="${w.image}" alt="Réalisation ${esc(w.name)}" style="object-position:${w.objectPosition}">
+      <img src="${w.image}" alt="Réalisation ${esc(w.name)}" style="object-position:${w.objectPosition}" width="640" height="640" loading="lazy" decoding="async">
     </div>
     <div class="work__row">
       <div>
@@ -77,7 +77,7 @@ document.getElementById('quotesGrid').innerHTML = data.testimonials.map((q) => `
     <div class="quote__mark">&ldquo;</div>
     <blockquote class="quote__text">${esc(q.text)}</blockquote>
     <figcaption class="quote__foot">
-      <img class="quote__av" src="${q.avatar}" alt="${esc(q.name)}">
+      <img class="quote__av" src="${q.avatar}" alt="${esc(q.name)}" width="96" height="96" loading="lazy" decoding="async">
       <div>
         <div class="quote__name">${esc(q.name)}</div>
         <div class="quote__role">${esc(q.role)}</div>
