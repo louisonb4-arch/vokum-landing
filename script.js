@@ -5,13 +5,21 @@
 
 const arrow = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
 
+const icons = {
+  target: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>',
+  pencil: '<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+  code: '<svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>',
+  'bar-chart': '<svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
+  search: '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M11 8a3 3 0 0 0-3 3"/></svg>'
+};
+
 const data = {
   services: [
-    { slug: 'strategie', n: '01', title: 'STRATÉGIE', line: 'On analyse votre offre pour poser les bases qui convertissent.' },
-    { slug: 'design', n: '02', title: 'DESIGN', line: 'Un design épuré qui capte en moins de 3 secondes.' },
-    { slug: 'developpement', n: '03', title: 'DÉVELOPPEMENT', line: "Rapide, propre, charge en moins d'une seconde." },
-    { slug: 'seo-geo', n: '04', title: 'SEO & GEO', line: 'Trouvé sur Google, cité par les IA.' },
-    { slug: 'optimisation', n: '05', title: 'OPTIMISATION', line: 'On teste et on itère pour gagner des points chaque mois.' }
+    { slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'STRATÉGIE', line: "On analyse votre offre, votre marché et vos concurrents pour poser les bases d'une landing page qui parle à votre audience." },
+    { slug: 'design', n: '02', icon: 'pencil', iconBg: '#f3ecc9', title: 'DESIGN', line: 'Un design moderne, épuré et pensé pour capter dès les premières secondes.' },
+    { slug: 'developpement', n: '03', icon: 'code', iconBg: '#d9e6ea', title: 'DÉVELOPPEMENT', line: 'Développement rapide, propre et optimisé pour la vitesse et la performance.' },
+    { slug: 'seo-geo', n: '04', icon: 'search', iconBg: '#f3dcd4', title: 'SEO & GEO', line: 'Être trouvé sur Google et cité par les IA comme ChatGPT ou Perplexity.' },
+    { slug: 'optimisation', n: '05', icon: 'bar-chart', iconBg: '#e4dcef', title: 'OPTIMISATION', line: 'On teste, on mesure et on optimise en continu pour maximiser vos conversions.' }
   ],
   steps: [
     { n: '01', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
@@ -35,11 +43,18 @@ const data = {
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
-  <a class="svc-line reveal" href="/services#${s.slug}">
-    <span class="svc-line__num">${s.n}</span>
-    <h3 class="svc-line__title">${esc(s.title)}</h3>
-    <p class="svc-line__desc">${esc(s.line)}</p>
-    <span class="svc-line__go">${arrow}</span>
+  <a class="scard reveal" href="/services#${s.slug}">
+    <div class="scard__top">
+      <div class="scard__icon" style="background:${s.iconBg}">${icons[s.icon] || ''}</div>
+      <span class="scard__num">${s.n}</span>
+    </div>
+    <span class="scard__rule"></span>
+    <h3 class="scard__title">${esc(s.title)}</h3>
+    <p class="scard__desc">${esc(s.line)}</p>
+    <div class="scard__foot">
+      <span class="scard__more">EN SAVOIR PLUS</span>
+      ${arrow}
+    </div>
   </a>`).join('');
 
 document.getElementById('timeline').innerHTML =
