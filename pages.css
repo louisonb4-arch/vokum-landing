@@ -151,6 +151,24 @@
 .plan .btn { justify-content: center; }
 .plan--featured .btn--dark { background: #fff; color: #16160f; }
 
+/* ============ ADD-ON (pack SEO & GEO, tarifs) ============ */
+.addon {
+  margin-top: 26px; border: 1.5px solid var(--green); border-radius: 18px;
+  padding: 30px 34px 34px; background: linear-gradient(135deg, #f4f8f3, #eef3ee);
+}
+.addon__badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1.2px; color: #fff; background: var(--green); border-radius: 20px; padding: 6px 14px; margin-bottom: 22px; }
+.addon__grid { display: grid; grid-template-columns: 1.2fr 1fr auto; gap: 40px; align-items: start; }
+.addon__title { font-family: var(--display); font-weight: 400; font-size: 30px; letter-spacing: .5px; margin: 0 0 12px; text-transform: uppercase; }
+.addon__desc { font-size: 13.5px; line-height: 1.65; color: var(--text-2); margin: 0; }
+.addon__more { color: var(--green-dark); font-weight: 700; text-decoration: none; white-space: nowrap; }
+.addon__more:hover { text-decoration: underline; }
+.addon__list { margin: 4px 0 0; }
+.addon__cta { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+.addon__price { font-family: var(--display); font-size: 38px; line-height: 1; color: var(--ink); }
+.addon__price span { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--text-3); }
+
+@media (max-width: 900px) { .addon__grid { grid-template-columns: 1fr; gap: 24px; } }
+
 /* ============ CTA BAND (réutilisable bas de page) ============ */
 .cta-band { padding: 0 0 80px; }
 .cta-band__inner {
