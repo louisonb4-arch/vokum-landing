@@ -167,6 +167,8 @@
 .addon__price { font-family: var(--display); font-size: 38px; line-height: 1; color: var(--ink); }
 .addon__price span { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--text-3); }
 
+.addon__note { margin: 24px 0 0; padding-top: 18px; border-top: 1px solid #d8e2d6; font-size: 12px; line-height: 1.6; color: var(--text-3); }
+
 @media (max-width: 900px) { .addon__grid { grid-template-columns: 1fr; gap: 24px; } }
 
 /* ============ CTA BAND (réutilisable bas de page) ============ */

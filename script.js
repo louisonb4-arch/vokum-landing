@@ -18,12 +18,12 @@ const data = {
     {
       slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'CRÉATION DE LANDING PAGE',
       line: 'Votre page sur-mesure, de la stratégie au lancement. Pensée pour convertir, livrée en moins d’une semaine.',
-      items: ['Stratégie & message de conversion', 'Design premium sur-mesure', 'Développement ultra-rapide', 'Tests A/B & optimisation continue']
+      items: ['Stratégie & message de conversion', 'Design premium sur-mesure', 'Développement ultra-rapide', 'Base SEO technique incluse', 'Tests A/B & optimisation continue']
     },
     {
-      slug: 'seo-geo', n: '02', icon: 'search', iconBg: '#f3dcd4', title: 'SEO & GEO',
-      line: 'Être trouvé sur Google — et cité par les IA comme ChatGPT ou Perplexity. Le référencement d’aujourd’hui et celui de demain.',
-      items: ['SEO technique : balises, vitesse, maillage', 'Données structurées Schema.org', 'Contenu citable par les IA', 'Suivi positions & mentions IA']
+      slug: 'seo-geo', n: '02', icon: 'search', iconBg: '#f3dcd4', title: 'SEO & GEO AVANCÉ',
+      line: 'En option, pour les marques qui veulent aller plus loin : une vraie stratégie de visibilité sur Google et dans les réponses des IA comme ChatGPT ou Perplexity.',
+      items: ['Recherche de mots-clés & structure de contenu', 'Données structurées Schema.org', 'Contenu citable par les IA', 'Suivi mensuel positions & mentions']
     }
   ],
   steps: [
