@@ -290,6 +290,8 @@ a { color: inherit; }
 
 .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .timeline__line { position: absolute; left: 24px; right: 24px; top: 14px; height: 2px; background: var(--timeline); z-index: 0; }
+.timeline__progress { position: absolute; left: 24px; top: 14px; height: 2px; width: 0; max-width: calc(100% - 48px); background: var(--green); z-index: 0; transition: width .15s linear; }
+.step__dot { transition: background .35s ease, color .35s ease, border-color .35s ease; }
 .step { position: relative; z-index: 1; }
 .step__dot {
   width: 30px; height: 30px; border-radius: 50%;

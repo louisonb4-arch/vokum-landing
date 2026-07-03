@@ -58,10 +58,10 @@ document.getElementById('servicesGrid').innerHTML = data.services.map((s) => `
   </a>`).join('');
 
 document.getElementById('timeline').innerHTML =
-  '<div class="timeline__line"></div>' +
+  '<div class="timeline__line"></div><div class="timeline__progress" id="timelineProgress"></div>' +
   data.steps.map((st) => `
   <a class="step reveal" href="/processus#etape-${st.n}">
-    <div class="step__dot ${st.active ? 'step__dot--active' : 'step__dot--idle'}">${st.n}</div>
+    <div class="step__dot step__dot--idle">${st.n}</div>
     <div class="step__title">${esc(st.title)}</div>
     <p class="step__desc">${esc(st.desc)}</p>
   </a>`).join('');
@@ -80,4 +80,34 @@ document.getElementById('worksGrid').innerHTML = data.works.map((w) => `
     </div>
     <div class="work__metric">${w.positive ? arrow : ''}${esc(w.metric)}</div>
   </a>`).join('');
+
+/* ---------- Timeline processus : progression au scroll ---------- */
+(() => {
+  const timeline = document.getElementById('timeline');
+  const progress = document.getElementById('timelineProgress');
+  if (!timeline || !progress) return;
+  const dots = [...timeline.querySelectorAll('.step__dot')];
+  const gaps = Math.max(1, dots.length - 1);
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp = (v) => Math.max(0, Math.min(1, v));
+
+  function update() {
+    const r = timeline.getBoundingClientRect();
+    const start = window.innerHeight * 0.82; // top ici → p=0
+    const end = window.innerHeight * 0.42;   // top ici → p=1
+    const p = reduced ? 1 : clamp((start - r.top) / (start - end));
+    progress.style.width = (p * 100) + '%';
+    dots.forEach((dot, i) => {
+      const on = p >= (i / gaps) - 0.02;
+      dot.classList.toggle('step__dot--active', on);
+      dot.classList.toggle('step__dot--idle', !on);
+    });
+  }
+
+  let ticking = false;
+  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { update(); ticking = false; }); } };
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+})();
 
