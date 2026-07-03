@@ -36,11 +36,6 @@ const data = {
     { slug: 'roll-in-love', category: 'COFFEE SHOP', name: 'Roll in Love', metric: 'Une DA existante, portée sur le web', positive: false, image: 'assets/work-rollinlove-640.webp', objectPosition: 'center top' },
     { slug: 'malize', category: 'PÊCHE ARTISANALE', name: "M'Alizé", metric: 'De Facebook à un vrai site', positive: false, image: 'assets/work-malize-640.webp', objectPosition: 'center top' },
     { slug: 'petits-lapins-du-poiron', category: 'ÉLEVAGE BIO', name: 'Les Petits Lapins du Poiron', metric: 'DA complète + vente en ligne', positive: false, image: 'assets/work-lapins-640.webp', objectPosition: 'center top' }
-  ],
-  testimonials: [
-    { text: 'Vokum a transformé notre landing page et nos résultats ont explosé. Une équipe réactive et ultra pro.', name: 'Thomas B.', role: 'CEO @ Finora', avatar: 'assets/p9-96.webp' },
-    { text: 'Livré en 5 jours, design incroyable et surtout des conversions au rendez-vous.', name: 'Julie L.', role: 'Marketing @ Nubik', avatar: 'assets/p8-96.webp' },
-    { text: 'Une approche stratégique qui fait toute la différence. Je recommande à 100%.', name: 'Marc D.', role: 'Fondateur @ Studio Vertex', avatar: 'assets/p7-96.webp' }
   ]
 };
 
@@ -86,15 +81,3 @@ document.getElementById('worksGrid').innerHTML = data.works.map((w) => `
     <div class="work__metric">${w.positive ? arrow : ''}${esc(w.metric)}</div>
   </a>`).join('');
 
-document.getElementById('quotesGrid').innerHTML = data.testimonials.map((q) => `
-  <figure class="quote reveal">
-    <div class="quote__mark">&ldquo;</div>
-    <blockquote class="quote__text">${esc(q.text)}</blockquote>
-    <figcaption class="quote__foot">
-      <img class="quote__av" src="${q.avatar}" alt="${esc(q.name)}" width="96" height="96" loading="lazy" decoding="async">
-      <div>
-        <div class="quote__name">${esc(q.name)}</div>
-        <div class="quote__role">${esc(q.role)}</div>
-      </div>
-    </figcaption>
-  </figure>`).join('');
