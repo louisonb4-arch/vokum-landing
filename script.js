@@ -33,10 +33,9 @@ const data = {
     { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre page.' }
   ],
   works: [
-    { slug: 'nubik', category: 'SAAS', name: 'Nubik', metric: '+220% de conversions', positive: true, image: 'assets/p3-640.webp', objectPosition: 'center top' },
-    { slug: 'finora', category: 'FINTECH', name: 'Finora', metric: '+180% de leads', positive: true, image: 'assets/p4-640.webp', objectPosition: 'center' },
-    { slug: 'studio-vertex', category: 'AGENCE', name: 'Studio Vertex', metric: 'Refonte complète', positive: false, image: 'assets/p5-640.webp', objectPosition: 'center top' },
-    { slug: 'maison-armand', category: 'E-COMMERCE', name: 'Maison Armand', metric: '+160% de ventes', positive: true, image: 'assets/p6-640.webp', objectPosition: 'center' }
+    { slug: 'roll-in-love', category: 'COFFEE SHOP', name: 'Roll in Love', metric: 'Une DA existante, portée sur le web', positive: false, image: 'assets/work-rollinlove-640.webp', objectPosition: 'center top' },
+    { slug: 'malize', category: 'PÊCHE ARTISANALE', name: "M'Alizé", metric: 'De Facebook à un vrai site', positive: false, image: 'assets/work-malize-640.webp', objectPosition: 'center top' },
+    { slug: 'petits-lapins-du-poiron', category: 'ÉLEVAGE BIO', name: 'Les Petits Lapins du Poiron', metric: 'DA complète + vente en ligne', positive: false, image: 'assets/work-lapins-640.webp', objectPosition: 'center top' }
   ],
   testimonials: [
     { text: 'Vokum a transformé notre landing page et nos résultats ont explosé. Une équipe réactive et ultra pro.', name: 'Thomas B.', role: 'CEO @ Finora', avatar: 'assets/p9-96.webp' },

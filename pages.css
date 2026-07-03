@@ -69,6 +69,8 @@
 .case__grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; }
 .case__text p { font-size: 14.5px; line-height: 1.7; color: var(--text-2b); margin: 0 0 16px; }
 .case__metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-self: start; }
+.case__deliv { align-self: start; border: 1px solid var(--border-card); border-radius: 14px; padding: 24px 24px 26px; background: #fbfaf6; }
+.case__deliv .footer__title { margin-bottom: 16px; }
 .metric-card { border: 1px solid var(--border-card); border-radius: 14px; padding: 22px 20px; }
 .metric-card__val { font-family: var(--display); font-size: 36px; color: var(--green); line-height: 1; }
 .metric-card__label { font-size: 11px; font-weight: 600; letter-spacing: .4px; color: var(--text-3); margin-top: 8px; }
