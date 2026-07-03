@@ -54,7 +54,7 @@ const footerHTML = `
   <div class="container footer__grid">
     <div class="footer__brand">
       <div class="brand brand--footer">VOKUM<span class="brand__dot">.</span></div>
-      <p>Agence spécialisée dans la création de landing pages à haute conversion.</p>
+      <p>Agence spécialisée dans la création de sites web à haute conversion.</p>
     </div>
     <div class="footer__col">
       <div class="footer__title">NAVIGATION</div>
@@ -77,7 +77,7 @@ const footerHTML = `
   </div>
   <div class="container footer__base">
     <span>© ${new Date().getFullYear()} Vokum. Tous droits réservés.</span>
-    <span>Fait à Montréal ✦ landing pages qui convertissent.</span>
+    <span>Fait à Montréal ✦ sites web qui convertissent.</span>
   </div>
 </footer>`;
 

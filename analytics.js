@@ -26,7 +26,7 @@
 
   /* ---------- clics CTA & cartes (délégation) ---------- */
   document.addEventListener('click', (e) => {
-    // cartes réalisations (landing) / articles / guides — trackées même sans lien
+    // cartes réalisations (accueil) / articles / guides — trackées même sans lien
     const work = e.target.closest('.work');
     if (work) {
       trackEvent('project_card_click', { page: page(), project: work.querySelector('.work__name')?.textContent || '', dest: work.getAttribute('href') || '' });

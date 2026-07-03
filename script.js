@@ -1,5 +1,5 @@
 /* ============================================================
-   VOKUM — landing (index)
+   VOKUM — accueil (index)
    Rend les sections répétées. Chrome + interactions = site.js.
    ============================================================ */
 
@@ -16,8 +16,8 @@ const icons = {
 const data = {
   services: [
     {
-      slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'CRÉATION DE LANDING PAGE',
-      line: 'Votre page sur-mesure, de la stratégie au lancement. Pensée pour convertir, livrée en moins d’une semaine.',
+      slug: 'strategie', n: '01', icon: 'target', iconBg: '#e3ead8', title: 'CRÉATION DE SITE WEB',
+      line: 'Votre site sur-mesure, de la stratégie au lancement. Pensée pour convertir, livrée en moins d’une semaine.',
       items: ['Stratégie & message de conversion', 'Design premium sur-mesure', 'Développement ultra-rapide', 'Base SEO technique incluse', 'Tests A/B & optimisation continue']
     },
     {
@@ -29,8 +29,8 @@ const data = {
   steps: [
     { n: '01', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
     { n: '02', active: false, title: 'STRATÉGIE', desc: 'On structure le message et la page pour convertir.' },
-    { n: '03', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre landing page.' },
-    { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre page.' }
+    { n: '03', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre site web.' },
+    { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre site.' }
   ],
   works: [
     { slug: 'roll-in-love', category: 'COFFEE SHOP', name: 'Roll in Love', metric: 'Une DA existante, portée sur le web', positive: false, image: 'assets/work-rollinlove-720.webp', objectPosition: 'center top' },
