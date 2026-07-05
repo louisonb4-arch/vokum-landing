@@ -77,7 +77,12 @@ const footerHTML = `
   </div>
   <div class="container footer__base">
     <span>© ${new Date().getFullYear()} Vokum. Tous droits réservés.</span>
-    <span>Fait à Montréal ✦ sites web qui convertissent.</span>
+    <nav class="footer__legal" aria-label="Informations légales">
+      <a href="/mentions-legales">Mentions légales</a>
+      <span aria-hidden="true">·</span>
+      <a href="/politique-confidentialite">Politique de confidentialité</a>
+    </nav>
+    <span class="footer__made">Fait à Montréal ✦ sites web qui convertissent.</span>
   </div>
 </footer>`;
 

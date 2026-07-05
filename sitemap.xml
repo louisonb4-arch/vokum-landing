@@ -10,4 +10,6 @@
   <url><loc>https://vokum-landing.vercel.app/blog</loc><priority>0.5</priority></url>
   <url><loc>https://vokum-landing.vercel.app/guides</loc><priority>0.5</priority></url>
   <url><loc>https://vokum-landing.vercel.app/faq</loc><priority>0.5</priority></url>
+  <url><loc>https://vokum-landing.vercel.app/mentions-legales</loc><priority>0.2</priority></url>
+  <url><loc>https://vokum-landing.vercel.app/politique-confidentialite</loc><priority>0.2</priority></url>
 </urlset>
