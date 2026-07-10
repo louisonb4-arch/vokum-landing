@@ -8,10 +8,10 @@ const arrow = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><p
 
 const data = {
   steps: [
-    { n: '01', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
-    { n: '02', active: false, title: 'STRATÉGIE', desc: 'On structure le message et la page pour convertir.' },
-    { n: '03', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre site web.' },
-    { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre site.' }
+    { n: '01', day: 'JOUR 1', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
+    { n: '02', day: 'JOURS 2–3', active: false, title: 'STRATÉGIE', desc: 'On structure le message et la page pour convertir.' },
+    { n: '03', day: 'JOURS 3–6', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre site web.' },
+    { n: '04', day: 'JOUR 7', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre site.' }
   ]
 };
 
@@ -22,6 +22,7 @@ document.getElementById('timeline').innerHTML =
   data.steps.map((st) => `
   <a class="step reveal" href="/processus#etape-${st.n}">
     <div class="step__dot step__dot--idle">${st.n}</div>
+    <div class="step__day">${esc(st.day)}</div>
     <div class="step__title">${esc(st.title)}</div>
     <p class="step__desc">${esc(st.desc)}</p>
   </a>`).join('');
