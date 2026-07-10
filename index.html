@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem('vkIntro'))document.documentElement.classList.add('intro-seen');else sessionStorage.setItem('vkIntro','1')}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="pages.css">
 <link rel="canonical" href="https://vokum-landing.vercel.app/">
@@ -68,6 +69,9 @@
 </head>
 <body data-page="home">
 
+<div class="intro" aria-hidden="true"><div class="intro__brand">VOKUM<em>.</em></div></div>
+<script>setTimeout(function(){var i=document.querySelector('.intro');if(i)i.remove()},2600)</script>
+
 <div data-site-header></div>
 
 <main id="top">
@@ -75,8 +79,8 @@
   <!-- ============ 1. HERO ============ -->
   <section class="hero">
     <div class="container hero__grid">
-      <div class="hero__left reveal">
-        <h1 class="hero__title">On crée<br>des sites<br>web</h1>
+      <div class="hero__left">
+        <h1 class="hero__title"><span class="hline"><span>On crée</span></span><span class="hline"><span>des sites</span></span><span class="hline"><span>web</span></span></h1>
         <div class="hero__script">qui convertissent.</div>
         <p class="hero__lead">Nous concevons des sites web sur-mesure qui captent l'attention et transforment chaque visite en client.</p>
         <div class="hero__actions">
@@ -96,7 +100,7 @@
 
       </div>
 
-      <div class="hero__right reveal">
+      <div class="hero__right">
         <div class="hero__note">
           <div class="hero__note-text">Stratégie<br>Design<br>Conversion</div>
           <svg class="hero__note-arrow draw" width="90" height="60" viewBox="0 0 90 60" fill="none" aria-hidden="true">

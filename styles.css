@@ -607,3 +607,63 @@ a { color: inherit; }
   .hero__proof { gap: 8px; }
   .hero__proof li { padding: 7px 13px 7px 10px; font-size: 12px; }
 }
+
+/* ============ ANIMATION D'OUVERTURE (accueil) ============ */
+:root { --intro-delay: 1.05s; }
+.intro-seen { --intro-delay: .1s; }
+
+.intro {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  animation: introOut .65s cubic-bezier(.72, 0, .25, 1) forwards;
+  animation-delay: .95s;
+  pointer-events: none;
+}
+.intro__brand {
+  font-family: var(--body); font-weight: 800; font-size: clamp(30px, 3vw, 42px);
+  letter-spacing: -.5px; color: #f6f0e4;
+  opacity: 0; transform: translateY(14px);
+  animation: heroUp .55s cubic-bezier(.22,.61,.36,1) forwards .1s;
+}
+.intro__brand em { font-style: normal; color: #7fd89a; }
+.intro-seen .intro { display: none; }
+@keyframes introOut { to { transform: translateY(-101%); } }
+
+/* cascade du hero */
+.hero__title .hline { display: block; overflow: hidden; padding: .09em .04em; margin: -.09em -.04em; }
+.hero__title .hline > span {
+  display: block; transform: translateY(115%);
+  animation: heroLine .8s cubic-bezier(.2, .65, .25, 1) forwards;
+}
+.hero__title .hline:nth-child(1) > span { animation-delay: calc(var(--intro-delay) + .0s); }
+.hero__title .hline:nth-child(2) > span { animation-delay: calc(var(--intro-delay) + .09s); }
+.hero__title .hline:nth-child(3) > span { animation-delay: calc(var(--intro-delay) + .18s); }
+@keyframes heroLine { to { transform: translateY(0); } }
+
+.hero__script, .hero__lead, .hero__actions, .hero__proof {
+  opacity: 0; transform: translateY(18px);
+  animation: heroUp .7s cubic-bezier(.22,.61,.36,1) forwards;
+}
+.hero__script  { animation-delay: calc(var(--intro-delay) + .32s); }
+.hero__lead    { animation-delay: calc(var(--intro-delay) + .42s); }
+.hero__actions { animation-delay: calc(var(--intro-delay) + .52s); }
+.hero__proof   { animation-delay: calc(var(--intro-delay) + .62s); }
+@keyframes heroUp { to { opacity: 1; transform: translateY(0); } }
+
+.hero__right {
+  opacity: 0; transform: translateY(26px) scale(.985);
+  animation: heroMedia .9s cubic-bezier(.22,.61,.36,1) forwards;
+  animation-delay: calc(var(--intro-delay) + .45s);
+}
+@keyframes heroMedia { to { opacity: 1; transform: translateY(0) scale(1); } }
+
+/* la flèche manuscrite se dessine en dernier */
+.hero__note-arrow path:nth-child(1) { animation-delay: calc(var(--intro-delay) + 1s) !important; }
+.hero__note-arrow path:nth-child(2) { animation-delay: calc(var(--intro-delay) + 1.5s) !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro { display: none; }
+  .hero__title .hline > span, .hero__script, .hero__lead, .hero__actions,
+  .hero__proof, .hero__right { animation: none; opacity: 1; transform: none; }
+}
