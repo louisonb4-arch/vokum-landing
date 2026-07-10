@@ -5,101 +5,74 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================================
-   VOKUM DESIGN TOKENS — 3-Layer Architecture
-   Layer 1: Primitive  →  raw values
-   Layer 2: Semantic   →  purpose aliases
-   Layer 3: Component  →  component-specific
+   VOKUM DESIGN TOKENS — White / Black / Green
    ============================================================ */
 
 :root {
-  /* — Layer 1: Primitive tokens — */
-  --primitive-black:        #060606;
-  --primitive-black-soft:   #0d0d0d;
-  --primitive-black-mid:    #111111;
-  --primitive-gray-100:     #1a1a1a;
-  --primitive-gray-200:     #222222;
-  --primitive-gray-300:     #2a2a2a;
-  --primitive-gray-400:     #444444;
-  --primitive-gray-500:     #666666;
-  --primitive-gray-600:     #888888;
-  --primitive-gray-700:     #aaaaaa;
-  --primitive-white:        #f5f5f0;
-  --primitive-white-pure:   #ffffff;
+  /* Primitives */
+  --primitive-white:        #ffffff;
+  --primitive-off-white:    #f5f5f5;
+  --primitive-gray-100:     #e8e8e8;
+  --primitive-gray-200:     #d1d1d1;
+  --primitive-gray-300:     #a0a0a0;
+  --primitive-gray-400:     #6e6e73;
+  --primitive-gray-500:     #444444;
+  --primitive-black-soft:   #19171c;
+  --primitive-black:        #000000;
+  --primitive-green:        #00E836;
+  --primitive-green-dark:   #00b82a;
 
-  --primitive-gold-100:     #f5e6c0;
-  --primitive-gold-200:     #e8c97e;
-  --primitive-gold-300:     #d4aa55;
-  --primitive-gold-400:     #c9a84c;
-  --primitive-gold-500:     #b8962e;
-  --primitive-gold-600:     #8a6c28;
-  --primitive-gold-700:     #5a4518;
-
-  /* — Layer 2: Semantic tokens — */
-  --color-bg:               var(--primitive-black);
-  --color-bg-elevated:      var(--primitive-black-soft);
-  --color-bg-surface:       var(--primitive-black-mid);
-  --color-bg-surface-2:     var(--primitive-gray-100);
+  /* Semantic */
+  --color-bg:               var(--primitive-white);
+  --color-bg-surface:       var(--primitive-off-white);
+  --color-bg-dark:          var(--primitive-black-soft);
 
   --color-border:           var(--primitive-gray-100);
   --color-border-subtle:    var(--primitive-gray-200);
-  --color-border-emphasis:  var(--primitive-gray-300);
 
-  --color-text-primary:     var(--primitive-white);
-  --color-text-secondary:   var(--primitive-gray-600);
-  --color-text-muted:       var(--primitive-gray-500);
-  --color-text-disabled:    var(--primitive-gray-400);
+  --color-text-primary:     var(--primitive-black-soft);
+  --color-text-secondary:   var(--primitive-gray-400);
+  --color-text-muted:       var(--primitive-gray-300);
 
-  --color-accent:           var(--primitive-gold-400);
-  --color-accent-hover:     var(--primitive-gold-200);
-  --color-accent-muted:     var(--primitive-gold-600);
-  --color-accent-subtle:    color-mix(in srgb, var(--primitive-gold-400) 8%, transparent);
-  --color-accent-border:    color-mix(in srgb, var(--primitive-gold-400) 25%, transparent);
+  --color-accent:           var(--primitive-green);
+  --color-accent-dark:      var(--primitive-green-dark);
+  --color-accent-subtle:    color-mix(in srgb, var(--primitive-green) 10%, transparent);
+  --color-accent-border:    color-mix(in srgb, var(--primitive-green) 35%, transparent);
 
-  /* — Layer 3: Component tokens — */
-  --btn-primary-bg:         var(--color-accent);
-  --btn-primary-text:       #000000;
-  --btn-primary-hover:      var(--color-accent-hover);
+  /* Components */
+  --btn-primary-bg:         var(--primitive-black-soft);
+  --btn-primary-text:       #ffffff;
+  --btn-accent-bg:          var(--primitive-green);
+  --btn-accent-text:        #000000;
 
-  --btn-ghost-text:         var(--color-text-secondary);
-  --btn-ghost-border:       var(--color-border-emphasis);
-  --btn-ghost-hover-text:   var(--color-text-primary);
-  --btn-ghost-hover-border: var(--color-border-emphasis);
+  --card-bg:                var(--primitive-off-white);
+  --card-border:            var(--primitive-gray-100);
 
-  --card-bg:                var(--color-bg-elevated);
-  --card-border:            var(--color-border);
-  --card-hover-border:      var(--color-border-emphasis);
-  --card-hover-glow:        var(--color-accent-subtle);
+  --input-bg:               var(--primitive-white);
+  --input-border:           var(--primitive-gray-200);
+  --input-text:             var(--primitive-black-soft);
+  --input-placeholder:      var(--primitive-gray-300);
 
-  --badge-bg:               var(--color-accent-subtle);
-  --badge-border:           var(--color-accent-border);
-  --badge-text:             var(--color-accent);
+  --nav-bg-scrolled:        color-mix(in srgb, #ffffff 94%, transparent);
 
-  --input-bg:               var(--primitive-black-mid);
-  --input-border:           var(--color-border-subtle);
-  --input-focus-border:     var(--color-accent-border);
-  --input-text:             var(--color-text-primary);
-  --input-placeholder:      var(--primitive-gray-400);
-
-  --nav-bg-scrolled:        color-mix(in srgb, var(--primitive-black) 90%, transparent);
-
-  /* — shadcn/ui overrides — */
+  /* shadcn overrides */
   --background:             var(--color-bg);
   --foreground:             var(--color-text-primary);
   --card:                   var(--card-bg);
   --card-foreground:        var(--color-text-primary);
-  --primary:                var(--color-accent);
-  --primary-foreground:     #000000;
-  --secondary:              var(--color-bg-surface-2);
+  --primary:                var(--primitive-black-soft);
+  --primary-foreground:     #ffffff;
+  --secondary:              var(--primitive-off-white);
   --secondary-foreground:   var(--color-text-primary);
-  --muted:                  var(--color-bg-surface-2);
+  --muted:                  var(--primitive-off-white);
   --muted-foreground:       var(--color-text-muted);
-  --accent:                 var(--color-bg-surface-2);
+  --accent:                 var(--primitive-off-white);
   --accent-foreground:      var(--color-text-primary);
   --border:                 var(--color-border);
   --input:                  var(--color-border-subtle);
-  --ring:                   var(--color-accent-border);
+  --ring:                   var(--primitive-green);
   --radius:                 0.5rem;
-  --popover:                var(--color-bg-surface);
+  --popover:                var(--color-bg);
   --popover-foreground:     var(--color-text-primary);
 }
 
@@ -107,22 +80,17 @@
   --color-background:       var(--background);
   --color-foreground:       var(--foreground);
   --color-bg:               var(--color-bg);
-  --color-bg-elevated:      var(--color-bg-elevated);
   --color-bg-surface:       var(--color-bg-surface);
   --color-accent:           var(--color-accent);
-  --color-accent-hover:     var(--color-accent-hover);
-  --color-accent-muted:     var(--color-accent-muted);
   --color-text-primary:     var(--color-text-primary);
   --color-text-secondary:   var(--color-text-secondary);
-  --color-text-muted:       var(--color-text-muted);
   --color-border:           var(--color-border);
-  --font-sans:              var(--font-geist-sans);
-  --font-mono:              var(--font-geist-mono);
-  --font-display:           var(--font-bodoni);
+  --font-sans:              var(--font-inter);
+  --font-display:           var(--font-inter);
 }
 
 /* ============================================================
-   BASE STYLES
+   BASE
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -135,7 +103,7 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-text-primary);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -149,53 +117,12 @@ body {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent-muted);
+  background: var(--primitive-gray-200);
   border-radius: 2px;
 }
 
 /* ============================================================
-   UTILITY CLASSES
-   ============================================================ */
-
-.vk-gradient-text {
-  background: linear-gradient(135deg,
-    var(--primitive-gold-100) 0%,
-    var(--primitive-gold-200) 30%,
-    var(--primitive-gold-400) 60%,
-    var(--primitive-gold-600) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.vk-grid-bg {
-  background-image:
-    linear-gradient(var(--color-accent-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--color-accent-border) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
-}
-
-.vk-glow {
-  background: radial-gradient(
-    ellipse 60% 50% at 50% 0%,
-    color-mix(in srgb, var(--color-accent) 12%, transparent),
-    transparent 70%
-  );
-}
-
-.vk-noise {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* ============================================================
-   ACCESSIBILITY — reduced motion
+   ACCESSIBILITY
    ============================================================ */
 
 @media (prefers-reduced-motion: reduce) {
@@ -207,7 +134,7 @@ body {
 }
 
 /* ============================================================
-   shadcn/ui OVERRIDES
+   shadcn/ui BASE
    ============================================================ */
 
 @layer base {

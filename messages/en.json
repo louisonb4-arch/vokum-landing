@@ -1,19 +1,23 @@
 {
+  "meta": {
+    "title": "Vokum — Professional Website Design in One Week, from €500",
+    "description": "Vokum builds your business website in one week, from €500. Custom design, technical SEO, hosting and maintenance for €20/month. Reply within 24 hours.",
+    "ogAlt": "Vokum — Your professional website in one week, from €500"
+  },
   "nav": {
     "services": "Services",
+    "why": "Why a website",
     "process": "Process",
-    "portfolio": "Portfolio",
-    "contact": "Contact",
-    "cta": "Start a project"
+    "faq": "FAQ",
+    "cta": "Let's talk about your project"
   },
   "hero": {
-    "badge": "Web Agency",
-    "title": "We craft digital",
-    "titleAccent": "experiences",
-    "titleEnd": "that convert.",
-    "subtitle": "Vokum builds premium websites and landing pages for freelancers and companies who demand excellence.",
-    "cta": "Start your project",
-    "ctaSecondary": "See our work"
+    "badge": "Vokum AI: custom digital solutions, powered by AI",
+    "badgeLink": "Learn more",
+    "title": "Digital experiences",
+    "titleEnd": "that make the difference",
+    "subtitle": "We design websites, identities and digital products crafted to attract, convert and leave a mark.",
+    "cta": "Start a project"
   },
   "services": {
     "badge": "What we do",
@@ -22,22 +26,125 @@
     "subtitle": "Every project is crafted with precision — from strategy to pixel-perfect execution.",
     "items": [
       {
-        "title": "Landing Pages",
-        "description": "High-converting landing pages designed to turn visitors into customers. Fast, responsive, and built for results."
-      },
-      {
         "title": "Business Websites",
-        "description": "Professional websites that reflect your brand identity and establish authority in your market."
+        "description": "A clear, professional website to present your business, services and contact details — and earn your future customers' trust."
       },
       {
-        "title": "Freelancer Portfolios",
-        "description": "Stunning portfolios that showcase your work and attract premium clients."
+        "title": "Landing Pages",
+        "description": "A single page built to convert: present an offer, collect quote requests or launch a new activity."
       },
       {
-        "title": "E-commerce",
-        "description": "Online stores that provide a seamless buying experience and drive revenue growth."
+        "title": "Website Redesign",
+        "description": "Is your current site slow, dated or hard to update? We modernize it: design, speed, mobile and clean SEO foundations."
+      },
+      {
+        "title": "Hosting & Maintenance",
+        "description": "We handle the technical side for €20/month: hosting, updates, fixes and small changes. Nothing for you to worry about."
       }
     ]
+  },
+  "why": {
+    "badge": "Why a website",
+    "title": "Why your business needs",
+    "titleAccent": "a website",
+    "introTitle": "Your customers are already looking for you online. What do they find when they search for your business?",
+    "introText": "Before calling, booking or visiting, many customers check a business online first. A professional website presents your activity clearly, reassures your prospects and guides them toward getting in touch.",
+    "cards": [
+      {
+        "tag": "Instant credibility",
+        "title": "Build trust from the very first search",
+        "text": "A clear, professional website reassures future customers about your seriousness, your expertise and the quality of your services. Without one, a business can look less established than a competitor with far less experience."
+      },
+      {
+        "tag": "Open 24/7",
+        "title": "Your business stays reachable, even when you're off",
+        "text": "Your services, opening hours, contact details and key information remain available at all times. Prospects can discover your business without waiting for a reply on social media or by phone."
+      },
+      {
+        "tag": "More inquiries",
+        "title": "Turn searches into real contacts",
+        "text": "A visitor who quickly understands what you offer, why to choose you and how to reach you is far more likely to take action. Your website can generate:",
+        "list": [
+          "phone calls",
+          "quote requests",
+          "bookings",
+          "appointments",
+          "new leads"
+        ]
+      },
+      {
+        "tag": "A professional image",
+        "title": "Present your business at the level of your work",
+        "text": "A modern, personalized design showcases your craft and sets you apart from competitors. Your website should reflect the real quality of your business."
+      },
+      {
+        "tag": "A presence you own",
+        "title": "Stop depending only on social media",
+        "text": "Instagram, Facebook and social platforms are useful, but you control neither their rules nor their algorithms. Your website puts you in charge of:",
+        "list": [
+          "your image",
+          "your message",
+          "your content",
+          "your customer journey",
+          "how people contact you"
+        ]
+      },
+      {
+        "tag": "Lasting visibility",
+        "title": "Help future customers find you",
+        "text": "A fast, well-structured, properly optimized website helps search engines understand your activity, your services and your area. Your online visibility can then improve progressively, on solid foundations."
+      },
+      {
+        "tag": "Stop losing opportunities",
+        "title": "Without clear information, customers may pick a competitor",
+        "text": "When a prospect can't quickly find your services, your hours or an easy way to contact you, they may simply keep searching elsewhere. A website prevents losing opportunities just because information was hard to find."
+      },
+      {
+        "tag": "A tool that evolves",
+        "title": "Your website grows with your business",
+        "text": "Over time it can evolve to include new services, completed work, online booking, appointment scheduling or new pages."
+      }
+    ],
+    "conclusion": "Your website never sleeps. It presents your business, answers first questions and helps prospects take action, around the clock.",
+    "cta": "Get my website in one week"
+  },
+  "pricing": {
+    "badge": "Our offer",
+    "title": "Your professional website,",
+    "titleAccent": "ready in one week",
+    "subtitle": "We build a modern, fast website tailored to your business, from €500.",
+    "main": {
+      "label": "Website creation",
+      "pricePrefix": "From",
+      "price": "€500",
+      "features": [
+        "Custom design",
+        "Mobile, tablet and desktop ready",
+        "Clear presentation of your services",
+        "Contact form or direct contact",
+        "Performance optimization",
+        "SEO foundations",
+        "Launch and go-live"
+      ],
+      "note": "The final price depends on the number of pages, the amount of content, the requested features, integrations and the level of customization.",
+      "cta": "Start my project"
+    },
+    "sub": {
+      "label": "Hosting & maintenance",
+      "price": "€20",
+      "priceSuffix": "/ month",
+      "features": [
+        "Website hosting",
+        "SSL certificate and HTTPS",
+        "Technical updates",
+        "Bug fixes",
+        "Small text and info changes",
+        "Uptime monitoring",
+        "Support when you need it"
+      ],
+      "note": "You focus on your business. We take care of hosting, updates and keeping your website running smoothly."
+    },
+    "mention": "Larger changes, new pages or additional features may be quoted separately."
   },
   "process": {
     "badge": "How it works",
@@ -67,49 +174,39 @@
       }
     ]
   },
-  "portfolio": {
-    "badge": "Our work",
-    "title": "Selected",
-    "titleAccent": "projects",
-    "subtitle": "A curated selection of websites we've built for our clients.",
-    "viewProject": "View project",
-    "projects": [
-      {
-        "title": "Nexus Finance",
-        "category": "Business Website",
-        "description": "Premium financial advisory firm website with dynamic data visualizations."
-      },
-      {
-        "title": "Aura Studio",
-        "category": "Portfolio",
-        "description": "Creative agency portfolio with immersive animations and case studies."
-      },
-      {
-        "title": "Pulse Health",
-        "category": "Landing Page",
-        "description": "High-converting landing page for a health tech startup — 340% conversion lift."
-      }
-    ]
-  },
-  "testimonials": {
-    "badge": "Client love",
-    "title": "What our clients",
-    "titleAccent": "say",
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently asked",
+    "titleAccent": "questions",
+    "subtitle": "Everything you need to know before starting your web project.",
     "items": [
       {
-        "quote": "Vokum transformed our online presence. The new website tripled our inbound leads within the first month.",
-        "author": "Alexandre Martin",
-        "role": "CEO, Nexus Finance"
+        "q": "How much does a website cost?",
+        "a": "A professional website starts from €500. The final price depends on the number of pages, the amount of content, the requested features, integrations and the level of customization. After a first conversation, you receive a clear, detailed quote within 24 hours — no hidden fees. Hosting and maintenance then cost €20 per month."
       },
       {
-        "quote": "Exceptional quality and professionalism. They delivered beyond our expectations and on time.",
-        "author": "Sophie Leclerc",
-        "role": "Founder, Aura Studio"
+        "q": "How fast can my website be built?",
+        "a": "Most of our professional websites are built in one week. The timeline mainly depends on the complexity of the project and how quickly we receive your content and feedback. For more advanced projects, a precise schedule is set before we start."
       },
       {
-        "quote": "The landing page they built for us is a conversion machine. Best investment we've made.",
-        "author": "Carlos Rivera",
-        "role": "CMO, Pulse Health"
+        "q": "What does the €20/month plan include?",
+        "a": "It covers the entire technical side: hosting, SSL certificate (HTTPS), technical updates, bug fixes, uptime monitoring and support if anything goes wrong. Small changes — texts, opening hours, contact details — are included too. Larger changes, new pages or additional features are quoted separately."
+      },
+      {
+        "q": "How does the website creation process work?",
+        "a": "Four steps: discovery (your goals, business and customers), design (mockups tailored to your brand), development (a fast, secure, mobile-ready site), then launch after final checks. You approve each step, and most websites are delivered in one week."
+      },
+      {
+        "q": "Can I request changes after launch?",
+        "a": "Yes. Bug fixes and small changes — texts, opening hours, contact details, practical information — are included in the €20/month plan. For bigger changes, such as new pages or new features, we provide a quote before doing any work."
+      },
+      {
+        "q": "Will my website be optimized for Google?",
+        "a": "Yes. Every website ships technically optimized for search: clean structure, correct tags, fast loading, mobile-ready and content that search engines and AI assistants can easily understand. These foundations help your online visibility improve progressively — though no ranking can ever be guaranteed, by anyone."
+      },
+      {
+        "q": "Can you redesign my existing website?",
+        "a": "Yes. If your current site is slow, dated or hard to update, we rebuild it on a modern foundation: a new design true to your brand, better performance, mobile support and clean SEO basics. We first review your existing site, then send you a tailored quote."
       }
     ]
   },
@@ -131,7 +228,7 @@
     "links": {
       "services": "Services",
       "process": "Process",
-      "portfolio": "Portfolio",
+      "faq": "FAQ",
       "contact": "Contact"
     }
   }

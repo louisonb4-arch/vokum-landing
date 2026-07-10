@@ -1,89 +1,142 @@
 'use client';
 
+import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Globe, Building2, UserCircle, ShoppingBag } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import { useReducedMotion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-const icons = [Globe, Building2, UserCircle, ShoppingBag];
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Services() {
   const t = useTranslations('services');
-  const reduce = useReducedMotion();
+  const containerRef = useRef<HTMLElement>(null);
   const items = t.raw('items') as Array<{ title: string; description: string }>;
 
+  useGSAP(() => {
+    gsap.from('.services-number', {
+      autoAlpha: 0,
+      y: 20,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.services-number', start: 'top 85%', once: true },
+    });
+
+    gsap.from('.services-heading', {
+      autoAlpha: 0,
+      y: 20,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.services-heading', start: 'top 85%', once: true },
+    });
+
+    ScrollTrigger.batch('.service-row', {
+      start: 'top 88%',
+      once: true,
+      onEnter: batch => {
+        gsap.from(batch, {
+          x: 40,
+          autoAlpha: 0,
+          duration: 0.55,
+          ease: 'power3.out',
+          stagger: 0.08,
+        });
+      },
+    });
+  }, { scope: containerRef });
+
   return (
-    <section id="services" className="py-32 px-6 relative">
+    <section
+      id="services"
+      ref={containerRef}
+      className="py-28 px-6"
+      style={{ background: 'var(--color-bg)' }}
+    >
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          {...(reduce ? {} : {
-            initial: { opacity: 0, y: 30 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { duration: 0.6 },
-          })}
-          className="mb-16 max-w-2xl"
-        >
-          <Badge variant="outline" className="mb-5 text-[10px] uppercase tracking-[0.18em] rounded-full px-3 py-1"
-            style={{ background: 'var(--badge-bg)', borderColor: 'var(--badge-border)', color: 'var(--badge-text)' }}>
-            {t('badge')}
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-text-primary)', fontFamily: 'var(--font-display), var(--font-sans)', letterSpacing: '-0.02em' }}>
-            {t('title')} <span className="vk-gradient-text">{t('titleAccent')}</span>
-          </h2>
-          <p className="text-lg leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>{t('subtitle')}</p>
-        </motion.div>
+        <div className="flex flex-col md:flex-row gap-16 md:gap-24">
 
-        {/* 2×2 grid with shared border */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px rounded-xl overflow-hidden"
-          style={{ background: 'var(--color-border)' }}>
-          {items.map((item, i) => {
-            const Icon = icons[i];
-            return (
-              <motion.div
-                key={item.title}
-                {...(reduce ? {} : {
-                  initial: { opacity: 0, y: 20 },
-                  whileInView: { opacity: 1, y: 0 },
-                  viewport: { once: true },
-                  transition: { duration: 0.5, delay: i * 0.08 },
-                })}
+          {/* Left — sticky label */}
+          <div className="md:w-44 shrink-0 md:pt-3">
+            <div className="md:sticky md:top-28">
+              <div
+                className="services-number font-black leading-none mb-3 select-none"
+                style={{
+                  fontSize: 'clamp(64px, 8vw, 96px)',
+                  color: 'var(--primitive-gray-100)',
+                  letterSpacing: '-0.04em',
+                }}
               >
-                <Card className="group h-full rounded-none border-0 transition-all duration-300 cursor-pointer"
-                  style={{ background: 'var(--card-bg)' }}>
-                  <CardContent className="p-8 relative overflow-hidden">
-                    {/* Hover glow */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                      style={{ background: 'radial-gradient(circle at 20% 20%, var(--card-hover-glow), transparent 70%)' }} />
+                01
+              </div>
+              <div
+                className="services-heading text-[11px] font-semibold uppercase tracking-[0.22em]"
+                style={{ color: 'var(--color-text-muted)' }}
+              >
+                {t('badge')}
+              </div>
+            </div>
+          </div>
 
-                    <div className="relative">
-                      {/* Icon box */}
-                      <div className="w-11 h-11 rounded flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-105"
-                        style={{
-                          background: 'var(--color-bg-surface-2)',
-                          border: '1px solid var(--color-border-emphasis)',
-                        }}>
-                        <Icon size={18} style={{ color: 'var(--color-accent)' }} />
-                      </div>
+          {/* Right — list */}
+          <div className="flex-1">
+            <div className="services-heading mb-10">
+              <h2
+                className="font-black leading-tight tracking-tight"
+                style={{
+                  fontSize: 'clamp(32px, 4vw, 48px)',
+                  letterSpacing: '-0.025em',
+                  color: 'var(--color-text-primary)',
+                }}
+              >
+                {t('title')}{' '}
+                <span style={{ color: 'var(--color-accent)' }}>{t('titleAccent')}</span>
+              </h2>
+            </div>
 
-                      <h3 className="text-lg font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                        {item.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
-                        {item.description}
-                      </p>
-                    </div>
-
-                    {/* Bottom accent line */}
-                    <div className="absolute bottom-0 inset-x-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style={{ background: 'linear-gradient(to right, transparent, var(--color-accent), transparent)' }} />
-                  </CardContent>
-                </Card>
-              </motion.div>
-            );
-          })}
+            <div>
+              {items.map((item, i) => (
+                <div
+                  key={item.title}
+                  className="service-row group flex items-center justify-between py-6 rounded-lg px-4 -mx-4 cursor-pointer transition-colors duration-200"
+                  style={{
+                    borderBottom: i < items.length - 1 ? '1px solid var(--color-border)' : 'none',
+                    borderTop: i === 0 ? '1px solid var(--color-border)' : 'none',
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.background = 'var(--color-bg-surface)';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.background = 'transparent';
+                  }}
+                >
+                  <div className="flex-1 pr-8">
+                    <h3
+                      className="font-bold mb-1"
+                      style={{
+                        fontSize: 'clamp(20px, 2.5vw, 26px)',
+                        color: 'var(--color-text-primary)',
+                        letterSpacing: '-0.015em',
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p
+                      className="text-sm leading-relaxed max-w-lg"
+                      style={{ color: 'var(--color-text-secondary)' }}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+                  <span
+                    className="shrink-0 text-xl font-light transition-transform duration-200 group-hover:translate-x-1"
+                    style={{ color: 'var(--color-accent)' }}
+                  >
+                    →
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

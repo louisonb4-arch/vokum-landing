@@ -1,19 +1,23 @@
 {
+  "meta": {
+    "title": "Vokum — Creación de sitios web profesionales en una semana, desde 500 €",
+    "description": "Vokum crea el sitio web de tu empresa en una semana, desde 500 €. Diseño a medida, SEO técnico, hosting y mantenimiento por 20 €/mes. Respuesta en 24 horas.",
+    "ogAlt": "Vokum — Tu sitio web profesional en una semana, desde 500 €"
+  },
   "nav": {
     "services": "Servicios",
+    "why": "Por qué una web",
     "process": "Proceso",
-    "portfolio": "Portfolio",
-    "contact": "Contacto",
+    "faq": "FAQ",
     "cta": "Iniciar proyecto"
   },
   "hero": {
     "badge": "Agencia Web",
     "title": "Creamos",
-    "titleAccent": "experiencias digitales",
     "titleEnd": "que convierten.",
     "subtitle": "Vokum diseña sitios web y landing pages premium para freelancers y empresas que exigen excelencia.",
     "cta": "Iniciar tu proyecto",
-    "ctaSecondary": "Ver nuestro trabajo"
+    "badgeLink": "Saber más"
   },
   "services": {
     "badge": "Lo que hacemos",
@@ -21,11 +25,126 @@
     "titleAccent": "rendir",
     "subtitle": "Cada proyecto se elabora con precisión — desde la estrategia hasta la ejecución pixel perfect.",
     "items": [
-      { "title": "Landing Pages", "description": "Landing pages de alta conversión diseñadas para convertir visitantes en clientes." },
-      { "title": "Sitios corporativos", "description": "Sitios profesionales que reflejan tu identidad de marca y establecen autoridad." },
-      { "title": "Portfolios Freelance", "description": "Portfolios impresionantes que muestran tu trabajo y atraen clientes premium." },
-      { "title": "E-commerce", "description": "Tiendas online que ofrecen una experiencia de compra fluida e impulsan el crecimiento." }
+      {
+        "title": "Sitios web corporativos",
+        "description": "Un sitio profesional y claro para presentar tu actividad, tus servicios y tus datos de contacto — y ganarte la confianza de tus futuros clientes."
+      },
+      {
+        "title": "Landing pages",
+        "description": "Una página única diseñada para convertir: presentar una oferta, recibir solicitudes de presupuesto o lanzar una nueva actividad."
+      },
+      {
+        "title": "Rediseño web",
+        "description": "¿Tu sitio actual es lento, anticuado o difícil de actualizar? Lo modernizamos: diseño, velocidad, móvil y bases SEO limpias."
+      },
+      {
+        "title": "Hosting y mantenimiento",
+        "description": "Nos ocupamos de la parte técnica por 20 €/mes: hosting, actualizaciones, correcciones y pequeños cambios. Tú no tienes que hacer nada."
+      }
     ]
+  },
+  "why": {
+    "badge": "Por qué una web",
+    "title": "Por qué tu empresa necesita",
+    "titleAccent": "un sitio web",
+    "introTitle": "Tus clientes ya te buscan en internet. ¿Qué encuentran cuando buscan tu empresa?",
+    "introText": "Antes de llamar, reservar o desplazarse, muchos clientes comprueban una empresa en internet. Un sitio profesional presenta claramente tu actividad, transmite confianza y guía a tus clientes potenciales hacia el contacto.",
+    "cards": [
+      {
+        "tag": "Credibilidad inmediata",
+        "title": "Genera confianza desde la primera búsqueda",
+        "text": "Un sitio claro y profesional tranquiliza a tus futuros clientes sobre tu seriedad, tu experiencia y la calidad de tus servicios. Sin web, una empresa puede parecer menos consolidada que un competidor con mucha menos experiencia."
+      },
+      {
+        "tag": "Disponible 24/7",
+        "title": "Tu empresa sigue accesible, incluso cuando no trabajas",
+        "text": "Tus servicios, horarios, datos de contacto e información importante están disponibles en todo momento. Tus clientes potenciales pueden conocer tu empresa sin esperar una respuesta en redes sociales o por teléfono."
+      },
+      {
+        "tag": "Más solicitudes",
+        "title": "Convierte las búsquedas en contactos reales",
+        "text": "Un visitante que entiende rápidamente qué ofreces, por qué elegirte y cómo contactarte tiene muchas más probabilidades de pasar a la acción. Tu sitio puede generar:",
+        "list": [
+          "llamadas",
+          "solicitudes de presupuesto",
+          "reservas",
+          "citas",
+          "nuevos clientes potenciales"
+        ]
+      },
+      {
+        "tag": "Imagen profesional",
+        "title": "Presenta tu empresa a la altura de tu trabajo",
+        "text": "Un diseño moderno y personalizado pone en valor tu saber hacer y te diferencia de la competencia. Tu web debe reflejar la calidad real de tu empresa."
+      },
+      {
+        "tag": "Una presencia que te pertenece",
+        "title": "Deja de depender solo de las redes sociales",
+        "text": "Instagram, Facebook y las plataformas sociales son útiles, pero no controlas ni sus reglas ni sus algoritmos. Tu sitio web te permite controlar:",
+        "list": [
+          "tu imagen",
+          "tu mensaje",
+          "tus contenidos",
+          "el recorrido de tus clientes",
+          "tus vías de contacto"
+        ]
+      },
+      {
+        "tag": "Visibilidad duradera",
+        "title": "Ayuda a tus futuros clientes a encontrarte",
+        "text": "Un sitio rápido, bien estructurado y correctamente optimizado ayuda a los buscadores a entender tu actividad, tus servicios y tu zona geográfica. Tu visibilidad online puede así mejorar progresivamente, sobre bases sólidas."
+      },
+      {
+        "tag": "No pierdas oportunidades",
+        "title": "Sin información clara, tus clientes pueden elegir a un competidor",
+        "text": "Cuando un cliente potencial no encuentra rápidamente tus servicios, tus horarios o una forma sencilla de contactarte, puede seguir buscando en otro sitio. Una web evita perder oportunidades solo porque la información era difícil de encontrar."
+      },
+      {
+        "tag": "Una herramienta que evoluciona",
+        "title": "Tu web crece con tu negocio",
+        "text": "Con el tiempo podrá evolucionar para incluir nuevos servicios, trabajos realizados, reservas online, citas o nuevas páginas."
+      }
+    ],
+    "conclusion": "Tu web nunca duerme. Presenta tu actividad, responde a las primeras preguntas y ayuda a tus clientes potenciales a pasar a la acción, las 24 horas.",
+    "cta": "Crear mi web en una semana"
+  },
+  "pricing": {
+    "badge": "Nuestra oferta",
+    "title": "Tu sitio web profesional,",
+    "titleAccent": "listo en una semana",
+    "subtitle": "Creamos un sitio moderno, rápido y adaptado a tu empresa, desde 500 €.",
+    "main": {
+      "label": "Creación del sitio",
+      "pricePrefix": "Desde",
+      "price": "500 €",
+      "features": [
+        "Diseño personalizado",
+        "Adaptado a móvil, tablet y ordenador",
+        "Presentación clara de tus servicios",
+        "Formulario o vía de contacto",
+        "Optimización del rendimiento",
+        "Bases del posicionamiento SEO",
+        "Puesta en línea"
+      ],
+      "note": "El precio final depende del número de páginas, el volumen de contenido, las funcionalidades solicitadas, las integraciones y el nivel de personalización.",
+      "cta": "Empezar mi proyecto"
+    },
+    "sub": {
+      "label": "Hosting y mantenimiento",
+      "price": "20 €",
+      "priceSuffix": "/ mes",
+      "features": [
+        "Alojamiento del sitio",
+        "Certificado SSL y HTTPS",
+        "Actualizaciones técnicas",
+        "Corrección de errores",
+        "Pequeños cambios de textos e información",
+        "Supervisión del funcionamiento",
+        "Asistencia cuando la necesites"
+      ],
+      "note": "Tú te concentras en tu negocio. Nosotros nos ocupamos del hosting, las actualizaciones y el buen funcionamiento de tu web."
+    },
+    "mention": "Los cambios importantes, páginas nuevas o funcionalidades adicionales pueden presupuestarse aparte."
   },
   "process": {
     "badge": "Cómo funciona",
@@ -33,32 +152,62 @@
     "titleAccent": "lanzamiento",
     "subtitle": "Un proceso optimizado diseñado para entregar resultados excepcionales a tiempo.",
     "steps": [
-      { "number": "01", "title": "Descubrimiento", "description": "Analizamos en profundidad tus objetivos, audiencia y mercado para crear la estrategia perfecta." },
-      { "number": "02", "title": "Diseño", "description": "Maquetas pixel perfect que capturan la esencia de tu marca y crean experiencias memorables." },
-      { "number": "03", "title": "Desarrollo", "description": "Código limpio y eficiente, construido con tecnologías modernas para velocidad, seguridad y escalabilidad." },
-      { "number": "04", "title": "Lanzamiento", "description": "Pruebas rigurosas seguidas de un despliegue fluido. Permanecemos contigo después del lanzamiento." }
+      {
+        "number": "01",
+        "title": "Descubrimiento",
+        "description": "Analizamos en profundidad tus objetivos, audiencia y mercado para crear la estrategia perfecta."
+      },
+      {
+        "number": "02",
+        "title": "Diseño",
+        "description": "Maquetas pixel perfect que capturan la esencia de tu marca y crean experiencias memorables."
+      },
+      {
+        "number": "03",
+        "title": "Desarrollo",
+        "description": "Código limpio y eficiente, construido con tecnologías modernas para velocidad, seguridad y escalabilidad."
+      },
+      {
+        "number": "04",
+        "title": "Lanzamiento",
+        "description": "Pruebas rigurosas seguidas de un despliegue fluido. Permanecemos contigo después del lanzamiento."
+      }
     ]
   },
-  "portfolio": {
-    "badge": "Nuestro trabajo",
-    "title": "Proyectos",
-    "titleAccent": "seleccionados",
-    "subtitle": "Una selección de sitios web que hemos construido para nuestros clientes.",
-    "viewProject": "Ver proyecto",
-    "projects": [
-      { "title": "Nexus Finance", "category": "Sitio corporativo", "description": "Sitio premium para empresa de asesoría financiera con visualizaciones de datos dinámicas." },
-      { "title": "Aura Studio", "category": "Portfolio", "description": "Portfolio de agencia creativa con animaciones inmersivas y casos de estudio." },
-      { "title": "Pulse Health", "category": "Landing Page", "description": "Landing page de alta conversión para startup de salud tech — +340% en conversiones." }
-    ]
-  },
-  "testimonials": {
-    "badge": "Lo que dicen",
-    "title": "Lo que dicen nuestros",
-    "titleAccent": "clientes",
+  "faq": {
+    "badge": "FAQ",
+    "title": "Preguntas",
+    "titleAccent": "frecuentes",
+    "subtitle": "Todo lo que necesitas saber antes de lanzar tu proyecto web.",
     "items": [
-      { "quote": "Vokum transformó nuestra presencia online. El nuevo sitio triplicó nuestros leads en el primer mes.", "author": "Alexandre Martin", "role": "CEO, Nexus Finance" },
-      { "quote": "Calidad y profesionalismo excepcionales. Superaron nuestras expectativas y entregaron a tiempo.", "author": "Sophie Leclerc", "role": "Fundadora, Aura Studio" },
-      { "quote": "La landing page que crearon es una máquina de conversión. La mejor inversión que hemos hecho.", "author": "Carlos Rivera", "role": "CMO, Pulse Health" }
+      {
+        "q": "¿Cuánto cuesta un sitio web?",
+        "a": "La creación de un sitio profesional empieza desde 500 €. El precio final depende del número de páginas, el volumen de contenido, las funcionalidades solicitadas, las integraciones y el nivel de personalización. Tras una primera conversación, recibes un presupuesto claro y detallado en 24 horas, sin costes ocultos. El hosting y el mantenimiento cuestan después 20 € al mes."
+      },
+      {
+        "q": "¿En cuánto tiempo se crea mi sitio web?",
+        "a": "La mayoría de nuestros sitios profesionales se crean en una semana. El plazo depende principalmente de la complejidad del proyecto y de la rapidez con la que recibimos tus contenidos y comentarios. Para proyectos más avanzados, se define un calendario preciso antes de empezar."
+      },
+      {
+        "q": "¿Qué incluye la cuota de 20 € al mes?",
+        "a": "Cubre toda la parte técnica: hosting, certificado SSL (HTTPS), actualizaciones técnicas, corrección de errores, supervisión del funcionamiento del sitio y asistencia si surge algún problema. Los pequeños cambios — textos, horarios, datos de contacto — también están incluidos. Las evoluciones importantes, páginas nuevas o funcionalidades adicionales se presupuestan aparte."
+      },
+      {
+        "q": "¿Cómo es el proceso de creación?",
+        "a": "Cuatro etapas: descubrimiento (tus objetivos, tu actividad, tus clientes), diseño (maquetas adaptadas a tu imagen), desarrollo (un sitio rápido, seguro y adaptado al móvil) y puesta en línea tras las verificaciones finales. Validas cada etapa, y la mayoría de los sitios se entregan en una semana."
+      },
+      {
+        "q": "¿Puedo pedir cambios después de la entrega?",
+        "a": "Sí. Las correcciones de errores y los pequeños cambios — textos, horarios, datos de contacto, información práctica — están incluidos en la cuota de 20 € al mes. Para cambios mayores, como páginas nuevas o nuevas funcionalidades, preparamos un presupuesto antes de intervenir."
+      },
+      {
+        "q": "¿Mi sitio estará optimizado para Google?",
+        "a": "Sí. Cada sitio se entrega técnicamente optimizado para los buscadores: estructura clara, etiquetas correctas, carga rápida, adaptación móvil y contenido fácil de entender tanto para los buscadores como para los asistentes de IA. Estas bases permiten mejorar progresivamente tu visibilidad online — aunque nadie puede garantizar una posición concreta."
+      },
+      {
+        "q": "¿Podéis rehacer un sitio web existente?",
+        "a": "Sí. Si tu sitio actual es lento, anticuado o difícil de actualizar, lo reconstruimos sobre una base moderna: nuevo diseño fiel a tu imagen, mejor rendimiento, adaptación móvil y bases SEO limpias. Primero revisamos tu sitio actual y después te enviamos un presupuesto a medida."
+      }
     ]
   },
   "contact": {
@@ -76,6 +225,11 @@
   "footer": {
     "tagline": "Excelencia digital, diseñada.",
     "rights": "Todos los derechos reservados.",
-    "links": { "services": "Servicios", "process": "Proceso", "portfolio": "Portfolio", "contact": "Contacto" }
+    "links": {
+      "services": "Servicios",
+      "process": "Proceso",
+      "faq": "FAQ",
+      "contact": "Contacto"
+    }
   }
 }

@@ -1,79 +1,109 @@
 'use client';
 
+import { useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Process() {
   const t = useTranslations('process');
+  const containerRef = useRef<HTMLElement>(null);
   const steps = t.raw('steps') as Array<{ number: string; title: string; description: string }>;
 
+  useGSAP(() => {
+    gsap.from('.process-heading', {
+      autoAlpha: 0,
+      y: 24,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: '.process-heading', start: 'top 85%', once: true },
+    });
+
+    gsap.from('.process-step', {
+      autoAlpha: 0,
+      y: 20,
+      duration: 0.6,
+      ease: 'power3.out',
+      stagger: 0.15,
+      scrollTrigger: { trigger: '.process-step', start: 'top 85%', once: true },
+    });
+
+    // Giant numbers fade in slowly
+    gsap.from('.process-step-number', {
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: 'power2.out',
+      stagger: 0.15,
+      scrollTrigger: { trigger: '.process-step-number', start: 'top 85%', once: true },
+    });
+  }, { scope: containerRef });
+
   return (
-    <section id="process" className="py-32 px-6 relative"
-      style={{ background: 'var(--color-bg-elevated)' }}>
-      {/* Glow */}
-      <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 50% 40% at 50% 100%, color-mix(in srgb, var(--color-accent) 4%, transparent), transparent)' }} />
-
-      <div className="max-w-6xl mx-auto relative">
+    <section
+      id="process"
+      ref={containerRef}
+      className="py-28 px-6"
+      style={{ background: 'var(--color-bg)' }}
+    >
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20 text-center"
-        >
-          <Badge variant="outline" className="mb-5 text-[10px] uppercase tracking-[0.18em] rounded-full px-3 py-1"
-            style={{ background: 'var(--badge-bg)', borderColor: 'var(--badge-border)', color: 'var(--badge-text)' }}>
-            {t('badge')}
-          </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--color-text-primary)', fontFamily: 'var(--font-display), var(--font-sans)', letterSpacing: '-0.02em' }}>
-            {t('title')} <span className="vk-gradient-text">{t('titleAccent')}</span>
+        <div className="process-heading mb-16">
+          <div
+            className="text-[11px] font-semibold uppercase tracking-[0.22em] mb-4"
+            style={{ color: 'var(--color-text-muted)' }}
+          >
+            03 — {t('badge')}
+          </div>
+          <h2
+            className="font-black leading-tight tracking-tight max-w-xl"
+            style={{
+              fontSize: 'clamp(32px, 4vw, 48px)',
+              letterSpacing: '-0.025em',
+              color: 'var(--color-text-primary)',
+            }}
+          >
+            {t('title')}{' '}
+            <span style={{ color: 'var(--color-accent)' }}>{t('titleAccent')}</span>
           </h2>
-          <p className="text-lg max-w-xl mx-auto" style={{ color: 'var(--color-text-muted)' }}>{t('subtitle')}</p>
-        </motion.div>
+        </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-0 relative">
-          {steps.map((step, i) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="relative flex flex-col items-center text-center px-4"
-            >
-              {/* Connector line */}
-              {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-8 left-1/2 w-full h-px"
-                  style={{ background: 'linear-gradient(to right, var(--color-accent-border), transparent)' }} />
-              )}
-
-              {/* Number */}
-              <div className="relative z-10 w-16 h-16 rounded flex items-center justify-center mb-6"
+        {/* Steps grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step) => (
+            <div key={step.number} className="process-step relative">
+              {/* Giant background number */}
+              <div
+                className="process-step-number font-black leading-none select-none mb-4"
                 style={{
-                  background: 'var(--color-bg)',
-                  border: '1px solid var(--color-accent-border)',
-                }}>
-                <span className="text-xl font-bold vk-gradient-text">{step.number}</span>
+                  fontSize: 'clamp(72px, 8vw, 100px)',
+                  letterSpacing: '-0.04em',
+                  color: 'var(--primitive-gray-100)',
+                  lineHeight: '1',
+                }}
+              >
+                {step.number}
               </div>
-
-              <h3 className="text-base font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              {/* Content */}
+              <h3
+                className="font-bold mb-2"
+                style={{
+                  fontSize: '17px',
+                  color: 'var(--color-text-primary)',
+                  letterSpacing: '-0.01em',
+                }}
+              >
                 {step.title}
               </h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-muted)' }}>
+              <p
+                className="text-sm leading-relaxed"
+                style={{ color: 'var(--color-text-secondary)' }}
+              >
                 {step.description}
               </p>
-
-              {/* Mobile separator */}
-              {i < steps.length - 1 && (
-                <Separator className="my-8 md:hidden w-px h-8 mx-auto"
-                  style={{ background: 'var(--color-accent-border)' }} />
-              )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
