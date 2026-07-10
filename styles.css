@@ -172,10 +172,16 @@ a { color: inherit; }
 .mobile-menu .btn { justify-content: center; margin-top: 14px; }
 
 /* ============ HERO ============ */
-.hero { background: radial-gradient(120% 90% at 18% 38%, #fbf3d8 0%, #f6f0e4 38%, #f2efe7 70%); }
+.hero {
+  background: radial-gradient(120% 90% at 18% 38%, #fbf3d8 0%, #f6f0e4 38%, #f2efe7 70%);
+  min-height: calc(100vh - 76px);
+  min-height: calc(100svh - 76px);
+  display: flex; align-items: center;
+}
+.hero > .container { width: 100%; }
 .hero__grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
-  align-items: start; padding-top: 30px; padding-bottom: 70px;
+  align-items: center; padding-top: 20px; padding-bottom: 48px;
 }
 .hero__grid > * { min-width: 0; }
 .hero__left { padding-top: 20px; }
