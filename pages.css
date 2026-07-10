@@ -153,7 +153,7 @@
 .acc__q .acc__icon::after { top: 0; bottom: 0; left: 10px; width: 2px; transition: transform .3s ease; }
 .acc__item.is-open .acc__icon::after { transform: scaleY(0); }
 .acc__a { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
-.acc__item.is-open .acc__a { max-height: 320px; }
+.acc__item.is-open .acc__a { max-height: 900px; }
 .acc__a p { font-size: 14px; line-height: 1.7; color: var(--text-2b); margin: 0 0 22px; max-width: 700px; }
 
 .faq-groups { display: grid; gap: 10px; }
@@ -165,6 +165,8 @@
 .plan__badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--green); margin-bottom: 14px; }
 .plan--featured .plan__badge { color: #a9c9af; }
 .plan__name { font-family: var(--display); font-weight: 400; font-size: 26px; letter-spacing: .5px; text-transform: uppercase; }
+.plan__price-from { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; color: var(--text-3); margin-bottom: 2px; }
+.plan--featured .plan__price-from { color: rgba(255,255,255,.5); }
 .plan__price { font-family: var(--display); font-size: 46px; margin: 18px 0 4px; }
 .plan__price span { font-family: var(--body); font-size: 13px; font-weight: 600; color: var(--text-3); }
 .plan--featured .plan__price span { color: #9aa89a; }

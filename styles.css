@@ -667,3 +667,29 @@ a { color: inherit; }
   .hero__title .hline > span, .hero__script, .hero__lead, .hero__actions,
   .hero__proof, .hero__right { animation: none; opacity: 1; transform: none; }
 }
+
+/* ============ AFFICHAGE DU CONTENU (global) ============ */
+/* typographie : lignes de titres équilibrées, pas de mots orphelins */
+h1, h2, h3, .h2, .hero__title, .page-hero__title, .vs__title, .offer__title { text-wrap: balance; }
+p, .section__sub, .hero__lead, .page-hero__lead { text-wrap: pretty; }
+
+/* entrée en cascade des heros de pages intérieures */
+.page-hero .breadcrumb,
+.page-hero__title,
+.page-hero__script,
+.page-hero__lead,
+.page-hero__actions {
+  opacity: 0; transform: translateY(16px);
+  animation: heroUp .65s cubic-bezier(.22,.61,.36,1) forwards;
+}
+.page-hero .breadcrumb  { animation-delay: .05s; }
+.page-hero__title       { animation-delay: .12s; }
+.page-hero__script      { animation-delay: .22s; }
+.page-hero__lead        { animation-delay: .32s; }
+.page-hero__actions     { animation-delay: .42s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero .breadcrumb, .page-hero__title, .page-hero__script,
+  .page-hero__lead, .page-hero__actions { animation: none; opacity: 1; transform: none; }
+  h1, h2, h3, .h2 { text-wrap: initial; }
+}

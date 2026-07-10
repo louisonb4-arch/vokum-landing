@@ -111,6 +111,14 @@ if (burger && menu) {
    Basé scroll/load (pas IntersectionObserver) : robuste même si des
    éléments .reveal sont injectés après coup, et garantit qu'aucun
    contenu ne reste invisible. */
+/* auto-reveal : titres de sections et questions FAQ apparaissent
+   en douceur sans classe manuelle ; léger décalage en cascade */
+document.querySelectorAll('.section__head:not(.reveal)').forEach((el) => el.classList.add('reveal'));
+document.querySelectorAll('.acc__item:not(.reveal)').forEach((el, i) => {
+  el.classList.add('reveal');
+  el.style.transitionDelay = (Math.min(i % 8, 5) * 0.05) + 's';
+});
+
 function revealInView() {
   const trigger = window.innerHeight * 0.92;
   document.querySelectorAll('.reveal:not(.is-in), .draw:not(.is-in)').forEach((el) => {
