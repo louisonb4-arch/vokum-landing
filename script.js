@@ -9,7 +9,7 @@ const arrow = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><p
 const data = {
   steps: [
     { n: '01', day: 'JOUR 1', active: true, title: 'DÉCOUVERTE', desc: 'On échange sur votre projet, vos objectifs et votre audience.' },
-    { n: '02', day: 'JOURS 2–3', active: false, title: 'STRATÉGIE', desc: 'On structure le message et la page pour convertir.' },
+    { n: '02', day: 'JOURS 2–3', active: false, title: 'STRATÉGIE', desc: 'On structure le message et les pages de votre site.' },
     { n: '03', day: 'JOURS 3–6', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre site web.' },
     { n: '04', day: 'JOUR 7', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre site.' }
   ]

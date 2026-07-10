@@ -53,7 +53,7 @@ const footerHTML = `
   <div class="container footer__grid">
     <div class="footer__brand">
       <div class="brand brand--footer">VOKUM<span class="brand__dot">.</span></div>
-      <p>Agence spécialisée dans la création de sites web à haute conversion.</p>
+      <p>Votre site web professionnel, créé en une semaine et géré pour vous.</p>
     </div>
     <div class="footer__col">
       <div class="footer__title">NAVIGATION</div>
@@ -76,7 +76,7 @@ const footerHTML = `
       <span aria-hidden="true">·</span>
       <a href="/politique-confidentialite">Politique de confidentialité</a>
     </nav>
-    <span class="footer__made">Des sites web qui convertissent ✦</span>
+    <span class="footer__made">Votre site en une semaine ✦</span>
   </div>
 </footer>`;
 
