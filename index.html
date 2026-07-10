@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VOKUM — Sites web premium qui convertissent</title>
-<meta name="description" content="VOKUM conçoit des sites web sur-mesure, rapides et stratégiques pour transformer vos visiteurs en clients.">
+<title>VOKUM — Votre site web professionnel en une semaine, à partir de 500 €</title>
+<meta name="description" content="VOKUM crée le site web de votre entreprise en une semaine, à partir de 500 €. Design sur-mesure, base SEO incluse, hébergement et maintenance à 20 €/mois.">
 <meta name="theme-color" content="#f6f0e4">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vokum-landing.vercel.app/">
-<meta property="og:title" content="Des sites web premium qui convertissent.">
-<meta property="og:description" content="Stratégie, design et développement pour lancer un site clair, rapide et orientée résultats.">
+<meta property="og:title" content="Votre site web professionnel en une semaine, à partir de 500 €">
+<meta property="og:description" content="Design sur-mesure, base SEO incluse, hébergement et maintenance à 20 €/mois. Devis clair sous 24 h.">
 <meta property="og:image" content="https://vokum-landing.vercel.app/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Des sites web premium qui convertissent.">
-<meta name="twitter:description" content="Stratégie, design et développement pour lancer un site clair, rapide et orientée résultats.">
+<meta name="twitter:title" content="Votre site web professionnel en une semaine, à partir de 500 €">
+<meta name="twitter:description" content="Design sur-mesure, base SEO incluse, hébergement et maintenance à 20 €/mois. Devis clair sous 24 h.">
 <meta name="twitter:image" content="https://vokum-landing.vercel.app/assets/og.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,23 +34,31 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": "Organization",
       "@id": "https://vokum-landing.vercel.app/#organization",
       "name": "VOKUM",
       "url": "https://vokum-landing.vercel.app/",
       "logo": "https://vokum-landing.vercel.app/apple-touch-icon.png",
       "image": "https://vokum-landing.vercel.app/assets/og.png",
-      "description": "Agence spécialisée en sites web premium orientées conversion : stratégie, design, développement et optimisation.",
+      "description": "Agence de création de sites web pour petites entreprises, commerces, restaurants, artisans et indépendants. Site professionnel livré en une semaine, à partir de 500 €. Hébergement et maintenance à 20 €/mois.",
       "email": "hello@vokum.agency",
-      "address": { "@type": "PostalAddress", "addressLocality": "Montréal", "addressRegion": "QC", "addressCountry": "CA" },
-      "areaServed": ["Québec", "Canada", "France", "International"],
-      "knowsAbout": ["Sites web", "Conversion", "Web design", "Développement web", "Tests A/B"]
+      "knowsAbout": ["Création de site web", "Site vitrine", "Landing page", "Refonte de site", "SEO", "Hébergement et maintenance"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Vokum",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Création de site web", "description": "Site professionnel sur-mesure, livré en une semaine, à partir de 500 €." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Refonte de site web", "description": "Modernisation d'un site existant : design, rapidité, mobile et bases SEO propres." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hébergement et maintenance", "description": "Hébergement, SSL, mises à jour, correctifs et petites modifications pour 20 € par mois." } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO & GEO", "description": "Base SEO technique incluse dans chaque site ; stratégie de visibilité avancée en option." } }
+        ]
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://vokum-landing.vercel.app/#website",
       "url": "https://vokum-landing.vercel.app/",
-      "name": "VOKUM — Sites web premium qui convertissent",
+      "name": "VOKUM — Création de sites web professionnels",
       "inLanguage": "fr",
       "publisher": { "@id": "https://vokum-landing.vercel.app/#organization" }
     }
@@ -70,7 +78,7 @@
       <div class="hero__left reveal">
         <h1 class="hero__title">On crée<br>des sites<br>web</h1>
         <div class="hero__script">qui convertissent.</div>
-        <p class="hero__lead">Nous concevons des sites web sur-mesure qui captent l'attention et transforment chaque visite en client.</p>
+        <p class="hero__lead">Nous concevons des sites web sur-mesure qui captent l'attention et transforment chaque visite en client. Votre site professionnel, livré en une semaine, à partir de 500&nbsp;€.</p>
         <div class="hero__actions">
           <a href="/contact" class="btn btn--dark btn--lg">DÉMARRER UN PROJET
             <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
@@ -80,17 +88,6 @@
           </a>
         </div>
 
-        <div class="trust">
-          <div class="eyebrow eyebrow--muted">ILS NOUS FONT CONFIANCE</div>
-          <div class="trust__logos">
-            <span class="logo">Qonto</span>
-            <span class="logo">deel<span class="logo__dot">.</span></span>
-            <span class="logo logo--alan"><span class="logo__dots"><i></i><i></i></span>alan</span>
-            <span class="logo logo--sm">superadvizor</span>
-            <span class="logo logo--sm logo--lemlist"><span class="logo__sq"></span>lemlist</span>
-            <span class="logo logo--script">Payflow</span>
-          </div>
-        </div>
       </div>
 
       <div class="hero__right reveal">
@@ -119,7 +116,7 @@
       <div class="perks reveal">
         <div class="perk">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/></svg>
-          <span>Livré en moins d'une semaine</span>
+          <span>Livré en une semaine</span>
         </div>
         <div class="perk">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
