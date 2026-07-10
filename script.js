@@ -31,11 +31,6 @@ const data = {
     { n: '02', active: false, title: 'STRATÉGIE', desc: 'On structure le message et la page pour convertir.' },
     { n: '03', active: false, title: 'DESIGN & DEV', desc: 'On conçoit et développe votre site web.' },
     { n: '04', active: false, title: 'LANCEMENT', desc: 'On optimise, on teste et on lance votre site.' }
-  ],
-  works: [
-    { slug: 'roll-in-love', category: 'COFFEE SHOP', name: 'Roll in Love', metric: 'Une DA existante, portée sur le web', positive: false, image: 'assets/work-rollinlove-720.webp', objectPosition: 'center top' },
-    { slug: 'malize', category: 'PÊCHE ARTISANALE', name: "M'Alizé", metric: 'De Facebook à un vrai site', positive: false, image: 'assets/work-malize-720.webp', objectPosition: 'center top' },
-    { slug: 'petits-lapins-du-poiron', category: 'ÉLEVAGE BIO', name: 'Les Petits Lapins du Poiron', metric: 'DA complète + vente en ligne', positive: false, image: 'assets/work-lapins-720.webp', objectPosition: 'center top' }
   ]
 };
 
@@ -64,21 +59,6 @@ document.getElementById('timeline').innerHTML =
     <div class="step__dot step__dot--idle">${st.n}</div>
     <div class="step__title">${esc(st.title)}</div>
     <p class="step__desc">${esc(st.desc)}</p>
-  </a>`).join('');
-
-document.getElementById('worksGrid').innerHTML = data.works.map((w) => `
-  <a class="work reveal" href="/realisations#${w.slug}">
-    <div class="work__thumb">
-      <img src="${w.image}" alt="Réalisation ${esc(w.name)}" style="object-position:${w.objectPosition}" width="720" height="450" loading="lazy" decoding="async">
-    </div>
-    <div class="work__row">
-      <div>
-        <div class="work__cat">${esc(w.category)}</div>
-        <div class="work__name">${esc(w.name)}</div>
-      </div>
-      <span class="work__arrow">${arrow}</span>
-    </div>
-    <div class="work__metric">${w.positive ? arrow : ''}${esc(w.metric)}</div>
   </a>`).join('');
 
 /* ---------- Timeline processus : progression au scroll ---------- */
