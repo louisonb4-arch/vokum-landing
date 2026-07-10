@@ -2,6 +2,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/apropos", "destination": "/a-propos", "permanent": true }
+    {
+      "source": "/apropos",
+      "destination": "/a-propos",
+      "permanent": true
+    },
+    {
+      "source": "/realisations",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

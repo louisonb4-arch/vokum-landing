@@ -8,7 +8,6 @@ const ARROW = '<svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><p
 const CONTACT = '/contact';
 
 const NAV = [
-  { label: 'RÉALISATIONS', href: '/realisations', key: 'realisations' },
   { label: 'SERVICES', href: '/services', key: 'services' },
   { label: 'PROCESSUS', href: '/processus', key: 'processus' },
   { label: 'À PROPOS', href: '/a-propos', key: 'apropos' },
@@ -16,7 +15,6 @@ const NAV = [
 ];
 
 const FOOT_NAV = [
-  { label: 'Réalisations', href: '/realisations' },
   { label: 'Services', href: '/services' },
   { label: 'Processus', href: '/processus' },
   { label: 'À propos', href: '/a-propos' }

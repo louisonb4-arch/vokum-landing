@@ -80,18 +80,4 @@
   }
   window.addEventListener('scroll', checkDepth, { passive: true });
 
-  /* ---------- vue d'étude de cas (page réalisations) ---------- */
-  if (page().startsWith('/realisations') && 'IntersectionObserver' in window) {
-    const seen = new Set();
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting && !seen.has(en.target.id)) {
-          seen.add(en.target.id);
-          trackEvent('case_study_view', { page: page(), project: en.target.id });
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    document.querySelectorAll('.case[id]').forEach((c) => io.observe(c));
-  }
 })();
