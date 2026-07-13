@@ -4,7 +4,7 @@
  *
  * Variables d'environnement requises :
  *   RESEND_API_KEY  — clé API Resend (https://resend.com/api-keys)
- *   CONTACT_TO      — email destinataire des leads (défaut : hello@vokum.agency)
+ *   CONTACT_TO      — email destinataire des leads (défaut : contact@vokumagency.com)
  *   CONTACT_FROM    — expéditeur vérifié chez Resend (défaut : onboarding@resend.dev)
  */
 
@@ -52,12 +52,12 @@ export default async function handler(req, res) {
   const timeline = String(body.timeline || '').trim();
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || 'hello@vokum.agency';
+  const to = process.env.CONTACT_TO || 'contact@vokumagency.com';
   const from = process.env.CONTACT_FROM || 'Vokum <onboarding@resend.dev>';
 
   if (!apiKey) {
     console.error('[contact] RESEND_API_KEY manquante — lead non envoyé:', { name, email, company, projectType, budget, timeline });
-    return res.status(503).json({ ok: false, error: "L'envoi est momentanément indisponible. Écrivez-nous à hello@vokum.agency." });
+    return res.status(503).json({ ok: false, error: "L'envoi est momentanément indisponible. Écrivez-nous à contact@vokumagency.com." });
   }
 
   const row = (label, value) => value
@@ -98,12 +98,12 @@ export default async function handler(req, res) {
     if (!r.ok) {
       const detail = await r.text().catch(() => '');
       console.error('[contact] Resend a refusé l\'envoi:', r.status, detail);
-      return res.status(502).json({ ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous à hello@vokum.agency." });
+      return res.status(502).json({ ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous à contact@vokumagency.com." });
     }
 
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('[contact] Erreur réseau vers Resend:', err);
-    return res.status(502).json({ ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous à hello@vokum.agency." });
+    return res.status(502).json({ ok: false, error: "L'envoi a échoué. Réessayez ou écrivez-nous à contact@vokumagency.com." });
   }
 }

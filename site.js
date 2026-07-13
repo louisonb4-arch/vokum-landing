@@ -65,7 +65,7 @@ const footerHTML = `
     </div>
     <div class="footer__col">
       <div class="footer__title">CONTACT</div>
-      <a href="mailto:hello@vokum.agency">hello@vokum.agency</a>
+      <a href="mailto:contact@vokumagency.com">contact@vokumagency.com</a>
       <span class="footer__muted">Réponse sous 24 h</span>
     </div>
   </div>

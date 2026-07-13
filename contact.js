@@ -114,7 +114,7 @@
       track('contact_form_error', { page: location.pathname });
       statusEl.textContent = err.message === 'Failed to fetch'
         ? 'Connexion impossible. Vérifiez votre réseau et réessayez.'
-        : (err.message || 'Une erreur est survenue. Réessayez ou écrivez-nous à hello@vokum.agency.');
+        : (err.message || 'Une erreur est survenue. Réessayez ou écrivez-nous à contact@vokumagency.com.');
       statusEl.classList.add('is-error');
     } finally {
       submitBtn.disabled = false;
