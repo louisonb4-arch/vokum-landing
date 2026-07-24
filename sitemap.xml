@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vokum-landing.vercel.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/services</loc><priority>0.9</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/contact</loc><priority>0.9</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/tarifs</loc><priority>0.8</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/pourquoi-un-site-web</loc><priority>0.8</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/processus</loc><priority>0.7</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/a-propos</loc><priority>0.6</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/blog</loc><priority>0.5</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/guides</loc><priority>0.5</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/faq</loc><priority>0.5</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/mentions-legales</loc><priority>0.2</priority></url>
-  <url><loc>https://vokum-landing.vercel.app/politique-confidentialite</loc><priority>0.2</priority></url>
+  <url><loc>https://vokumagency.com/</loc><lastmod>2026-07-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://vokumagency.com/services</loc><lastmod>2026-07-24</lastmod><priority>0.9</priority></url>
+  <url><loc>https://vokumagency.com/contact</loc><lastmod>2026-07-24</lastmod><priority>0.9</priority></url>
+  <url><loc>https://vokumagency.com/tarifs</loc><lastmod>2026-07-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://vokumagency.com/pourquoi-un-site-web</loc><lastmod>2026-07-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://vokumagency.com/faq</loc><lastmod>2026-07-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://vokumagency.com/processus</loc><lastmod>2026-07-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://vokumagency.com/a-propos</loc><lastmod>2026-07-24</lastmod><priority>0.6</priority></url>
+  <url><loc>https://vokumagency.com/mentions-legales</loc><lastmod>2026-07-24</lastmod><priority>0.2</priority></url>
+  <url><loc>https://vokumagency.com/politique-confidentialite</loc><lastmod>2026-07-24</lastmod><priority>0.2</priority></url>
 </urlset>
