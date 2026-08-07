@@ -13,11 +13,48 @@ const MAX = { name: 120, email: 200, company: 160, projectType: 60, budget: 60, 
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+// Limitation de debit.
+//
+// ATTENTION a la portee : une instance serverless a sa propre memoire, et
+// Vercel en demarre plusieurs. Ce compteur freine donc un envoi en boucle
+// sur une meme instance, il ne remplace pas une limitation au niveau du
+// reseau. Le vrai garde-fou est le rate limiting de Vercel Firewall, a
+// activer sur /api/contact (voir le rapport d'audit).
+//
+// L'IP est lue dans x-real-ip, pose par Vercel lui-meme. On n'utilise PAS
+// la valeur de gauche de x-forwarded-for : celle-la est fournie par le
+// client et se forge en une ligne de curl.
+const HITS = new Map();
+const PER_IP = { max: 3, windowMs: 10 * 60 * 1000 };
+const GLOBAL = { max: 30, windowMs: 10 * 60 * 1000 };
+
+function tooMany(key, { max, windowMs }) {
+  const now = Date.now();
+  const hits = (HITS.get(key) || []).filter((t) => now - t < windowMs);
+  if (hits.length >= max) {
+    HITS.set(key, hits);
+    return true;
+  }
+  hits.push(now);
+  HITS.set(key, hits);
+  if (HITS.size > 5000) HITS.clear(); // borne memoire
+  return false;
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
 
   if (req.method !== 'POST') {
     return res.status(405).json({ ok: false, error: 'Méthode non autorisée' });
+  }
+
+  const ip = req.headers['x-real-ip'] || req.socket?.remoteAddress || 'inconnue';
+  if (tooMany(`ip:${ip}`, PER_IP) || tooMany('global', GLOBAL)) {
+    res.setHeader('Retry-After', '600');
+    return res.status(429).json({
+      ok: false,
+      error: "Trop de demandes envoyées. Réessayez dans quelques minutes ou écrivez-nous à contact@vokumagency.com."
+    });
   }
 
   const body = req.body || {};
